@@ -9,6 +9,9 @@ Welcome to Day 1 of the 21-Day Frontend Development Challenge! In this project, 
 - Delete tasks: Click on the delete icon to remove a task from the list.
 - Data persistence: The tasks will be stored in the browser's local storage, allowing them to persist even after refreshing the page.
 
+[![Video Title](https://img.youtube.com/vi/gDqFXmf-4Vg/0.jpg)](https://youtu.be/gDqFXmf-4Vg)
+
+
 ## Prerequisites
 
 - Node.js installed on your machine

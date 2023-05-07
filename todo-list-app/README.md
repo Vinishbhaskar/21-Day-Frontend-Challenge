@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Day 1 - Todo Application using Local Storage in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Day 1 of the 21-Day Frontend Development Challenge! In this project, we will be building a Todo application using local storage in React. This application will allow users to add, complete, and delete tasks, with the added feature of data persistence using local storage.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add tasks: Enter a task in the input field and press enter to add it to the list.
+- Complete tasks: Click on a task to mark it as complete.
+- Delete tasks: Click on the delete icon to remove a task from the list.
+- Data persistence: The tasks will be stored in the browser's local storage, allowing them to persist even after refreshing the page.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js installed on your machine
+- Basic knowledge of React
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To get started with this project, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository: `git clone https://github.com/Vinishbhaskar/21-Day-Frontend-Challenge.git`
+2. Navigate to the project directory: `cd todo-application`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and visit `http://localhost:3000`
 
-### `npm run build`
+## Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project structure is organized as follows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+todo-application/
+├── src/
+│ ├── components/
+│ │ ├── CustomForm.js
+│ │ ├── EditForm.js
+│ │ ├── TaskList.js
+│ │ ├── TaskItem.js
+│ │ ├── TaskItem.module.css
+│ │ ├── TaskList.module.css
+│ ├── App.js
+│ ├── index.js
+│ ├── Index.css 
+├── public/
+├── README.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions are welcome! If you have any ideas, suggestions, or improvements, please open an issue or submit a pull request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is licensed under the [MIT License](LICENSE).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Acknowledgements
 
-## Learn More
+- [React](https://reactjs.org)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Create React App](https://create-react-app.dev)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Follow my journey in the [21-Day Frontend Development Challenge](Ihttps://github.com/Vinishbhaskar/21-Day-Frontend-Challenge), where I build a new React project every day. Let's connect on [LinkedIn](https://www.linkedin.com/in/vinishbhaskar/) and grow together as frontend developers. Stay tuned for more exciting projects!
 
-### Code Splitting
+Happy coding! 🚀💻🌟
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

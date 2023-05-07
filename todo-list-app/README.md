@@ -28,20 +28,17 @@ To get started with this project, follow these steps:
 
 The project structure is organized as follows:
 
-todo-application/
-├── src/
-│ ├── components/
-│ │ ├── CustomForm.js
-│ │ ├── EditForm.js
-│ │ ├── TaskList.js
-│ │ ├── TaskItem.js
-│ │ ├── TaskItem.module.css
-│ │ ├── TaskList.module.css
-│ ├── App.js
-│ ├── index.js
-│ ├── Index.css 
-├── public/
-├── README.md
+todo-application/ <br>
+├── src/ <br>
+│ ├── components/ <br>
+│ │ ├── CustomForm.js <br>
+│ │ ├── EditForm.js <br>
+│ │ ├── TaskList.js <br>
+│ │ ├── TaskItem.js <br>
+│ ├── App.js <br>
+│ ├── index.js <br>
+├── public/ <br>
+├── README.md <br>
 
 
 ## Contributing

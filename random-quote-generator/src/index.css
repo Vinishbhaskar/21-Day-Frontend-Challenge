@@ -1,0 +1,118 @@
+/* Reset default margin and padding */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set root font size for responsive scaling */
+  html {
+    font-size: 16px;
+  }
+  
+  /* Dark shade background color */
+  body {
+    background-color: rgba(214, 201, 201, 0.505);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: aqua;
+  }
+  
+  .generate-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+  }
+  
+  .generate-button:hover {
+    background-color: #45a049;
+  }
+
+  .quote {
+    margin-top: 2rem;
+  }
+  
+  .quote-text {
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+
+  }
+  
+  .quote-author {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: end;
+    color: aquamarine;
+    margin-bottom: 0.5rem;
+
+  }
+
+  .quote-icon-left {
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+  }
+  .quote-icon-right {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .card {
+      width: 80%;
+    }
+  
+    .title {
+      font-size: 1.25rem;
+    }
+  
+    .generate-button {
+      font-size: 0.875rem;
+    }
+  }
+  
+  
+  .quote-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between
+  }
+  
+  .action-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .action-button:hover {
+    background-color: #666;
+  }
+  

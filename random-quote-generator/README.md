@@ -1,8 +1,8 @@
 # Random Quote Generator
 
-<!-- ![Random Quote Generator](insert-screenshot-url-here) -->
-
 This is the repository for my Day 2 project of the 21-day frontend development challenge. The Random Quote Generator is a simple web application built with React that allows users to generate random quotes with just a click of a button.
+
+Live: [https://random-quote-generator-21day.netlify.app/]
 
 ## 🌟 Features
 
@@ -31,12 +31,11 @@ To get started with the Random Quote Generator, follow these steps:
 
 ## 🎥 Demo
 
-Check out the live demo of the Random Quote Generator [here](insert-live-demo-url-here).
+Check out the live demo of the Random Quote Generator [here](https://random-quote-generator-21day.netlify.app/).
 
 ## 📷 Screenshots
 
-<!-- ![Screenshot 1](insert-screenshot-1-url-here) -->
-<!-- ![Screenshot 2](insert-screenshot-2-url-here) -->
+![image](https://user-images.githubusercontent.com/25699351/236993283-aaf87ece-5ec4-4e08-814a-4cf2f94a5619.png)
 
 ## 💡 Conclusion
 

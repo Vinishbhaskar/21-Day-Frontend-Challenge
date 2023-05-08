@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import getRandomQuote from '../data/quotes';
 import QuoteDisplay from './QuoteDisplay';
+
 import { RiFileCopyLine } from 'react-icons/ri';
 import { FaQuoteLeft, FaQuoteRight,FaTwitter } from 'react-icons/fa';
 
@@ -36,14 +37,16 @@ const QuoteGenerator = () => {
   return (
     <div className="quote-generator">
       <div className="card">
+      
         <h1 className="title">Random Quote Generator</h1>
+
         <div className="quote-wrapper">
             <FaQuoteLeft className="quote-icon-left" />
             <QuoteDisplay quote={quote} />
             <FaQuoteRight className="quote-icon-right" />
         </div>
+        
         <div className="quote-actions">
-
           <button className="action-button" onClick={copyToClipboard}>
             <RiFileCopyLine /> Copy
           </button>
@@ -51,11 +54,9 @@ const QuoteGenerator = () => {
           <button className="action-button" onClick={shareOnSocialMedia}>
             <FaTwitter /> Share
           </button>
-
+          
           <Button className="generate-button" onClick={generateRandomQuote}>Generate Quote</Button>
-        </div>
-
-        
+        </div> 
       </div>
     </div>
   );

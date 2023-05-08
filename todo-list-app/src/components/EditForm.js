@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { CheckIcon } from '@heroicons/react/24/solid';
 
 const EditForm = ({ editedTask, updateTask, closeEditMode }) => {

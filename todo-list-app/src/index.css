@@ -241,3 +241,9 @@ hr {
   border: 0.1em solid hsl(var(--accent) / 0.3);
   box-shadow: 0 -1em 3em hsl(var(--muted)), 0 1em 3em hsl(var(--accent) / 0.2);
 }
+
+.tasksList {
+  display: grid;
+  list-style-type: none;
+  gap: 1.5em;
+}

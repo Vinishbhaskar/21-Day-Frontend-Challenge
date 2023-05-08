@@ -1,12 +1,11 @@
-import React from 'react';
 import TaskItem from './TaskItem';
-import styles from './TaskList.module.css';
 
-const TaskList = ({ tasks = [], deleteTask, toggleTask, enterEditMode }) => {
+const TaskList = ({ tasks = [], deleteTask, toggleTask, enterEditMode }) => 
+{
   const sortedTasks = tasks.sort((a, b) => b.id - a.id);
 
   return (
-    <ul className={styles.tasks}>
+    <ul className="tasksList">
       {sortedTasks.map(task => (
         <TaskItem
           key={task.id}

@@ -19,16 +19,12 @@ const QuoteGenerator = () => {
   );
 
   const copyToClipboard = () => {
-    // Logic to copy the quote text to the clipboard
-    // You can implement this functionality using libraries or native APIs
-    // Here, we'll simply log a message to simulate the copy action
+    
     console.log('Quote copied to clipboard!');
   };
 
   const shareOnSocialMedia = () => {
-    // Logic to share the quote on social media
-    // You can implement this functionality using social media sharing APIs
-    // Here, we'll simply log a message to simulate the share action
+    
     console.log('Quote shared on social media!');
   };
 
@@ -42,9 +38,11 @@ const QuoteGenerator = () => {
             <FaQuoteRight className="quote-icon-right" />
         </div>
         <div className="quote-actions">
+
           <button className="action-button" onClick={copyToClipboard}>
             <RiFileCopyLine /> Copy
           </button>
+
           <button className="action-button" onClick={shareOnSocialMedia}>
             <RiShareLine /> Share
           </button>

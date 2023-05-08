@@ -33,30 +33,18 @@ body, h1, p, button {
     color: aqua;
   }
   
-  .generate-button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
+  .quote-wrapper {
+    position: relative;
+    margin-bottom: 3rem;
   }
   
-  .generate-button:hover {
-    background-color: #45a049;
-  }
-
   .quote {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   
   .quote-text {
     font-size: 1.35rem;
     margin-bottom: 1.5rem;
-
   }
   
   .quote-author {
@@ -65,40 +53,27 @@ body, h1, p, button {
     text-align: end;
     color: aquamarine;
     margin-bottom: 0.5rem;
-
   }
-
+  
   .quote-icon-left {
     color: #fff;
     font-size: 20px;
     display: flex;
+    margin-top: 0.5rem;
   }
+  
   .quote-icon-right {
     color: #fff;
     font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
   }
-  
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .card {
-      width: 80%;
-    }
-  
-    .title {
-      font-size: 1.25rem;
-    }
-  
-    .generate-button {
-      font-size: 0.875rem;
-    }
-  }
-  
   
   .quote-actions {
     margin-top: 24px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
   }
   
   .action-button {
@@ -114,5 +89,35 @@ body, h1, p, button {
   
   .action-button:hover {
     background-color: #666;
+  }
+  
+  .generate-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .generate-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .card {
+      width: 80%;
+    }
+  
+    .title {
+      font-size: 1.25rem;
+    }
+  
+    .generate-button {
+      font-size: 0.875rem;
+    }
   }
   

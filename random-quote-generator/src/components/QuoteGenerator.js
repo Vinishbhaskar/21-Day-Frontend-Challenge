@@ -19,14 +19,18 @@ const QuoteGenerator = () => {
   );
 
   const copyToClipboard = () => {
+
     const quoteText = `${quote.text} - ${quote.author}`;
     navigator.clipboard.writeText(quoteText)
+    
   };
 
   const shareOnSocialMedia = () => {
+
     const textToShare = `"${quote.text}" - ${quote.author}`;
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textToShare)}`;
     window.open(twitterUrl, '_blank');
+  
   };
 
   return (

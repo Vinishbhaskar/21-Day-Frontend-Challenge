@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import getRandomQuote from '../data/quotes';
 import QuoteDisplay from './QuoteDisplay';
-import { RiFileCopyLine, RiShareLine } from 'react-icons/ri';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { RiFileCopyLine } from 'react-icons/ri';
+import { FaQuoteLeft, FaQuoteRight,FaTwitter } from 'react-icons/fa';
 
 const QuoteGenerator = () => {
   const [quote, setQuote] = useState(getRandomQuote());
@@ -19,13 +19,14 @@ const QuoteGenerator = () => {
   );
 
   const copyToClipboard = () => {
-    
-    console.log('Quote copied to clipboard!');
+    const quoteText = `${quote.text} - ${quote.author}`;
+    navigator.clipboard.writeText(quoteText)
   };
 
   const shareOnSocialMedia = () => {
-    
-    console.log('Quote shared on social media!');
+    const textToShare = `"${quote.text}" - ${quote.author}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textToShare)}`;
+    window.open(twitterUrl, '_blank');
   };
 
   return (
@@ -44,7 +45,7 @@ const QuoteGenerator = () => {
           </button>
 
           <button className="action-button" onClick={shareOnSocialMedia}>
-            <RiShareLine /> Share
+            <FaTwitter /> Share
           </button>
 
           <Button className="generate-button" onClick={generateRandomQuote}>Generate Quote</Button>

@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: #675AFE;
+}
+::selection{
+  color: #fff;
+  background: #675AFE;
+}
+.card{
+  width: 370px;
+  padding: 30px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+.card h2{
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.form{
+  margin: 40px 0 20px 0;
+}
+.form :where(input, select, button){
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+.form p{
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.form input{
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+  border: 1px solid #999;
+}
+.form input:focus{
+  padding: 0 14px;
+  border: 2px solid #675AFE;
+}
+
+.drop-list{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select-box{
+  display: flex;
+  width: 115px;
+  height: 45px;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  border: 1px solid #999;
+}
+.country-flag{
+  max-width: 24px;
+}
+.select-box select{
+  width: auto;
+  font-size: 16px;
+  background: none;
+  margin: 0 -5px 0 5px;
+}
+.select-box select::-webkit-scrollbar{
+  width: 8px;
+}
+.select-box select::-webkit-scrollbar-track{
+  background: #fff;
+}
+.select-box select::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+.icon{
+  cursor: pointer;
+  margin-top: 22px;
+  font-size: 22px;
+}
+
+.exchange-rate{
+  font-size: 14px;
+  margin: 25px 0 20px;
+}
+
+.exchange-result{
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+
+button{
+  height: 52px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  background: #675AFE;
+  transition: 0.3s ease;
+}
+form button:hover{
+  background: #4534fe;
+}

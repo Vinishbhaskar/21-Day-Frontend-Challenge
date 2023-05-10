@@ -12,6 +12,9 @@ Demo Link: https://currency-converter-21day.netlify.app/
 - User-friendly interface with input validation ✅🖥️
 - Display conversion results in real-time ⏲️🔄
 
+![image](https://github.com/Vinishbhaskar/21-Day-Frontend-Challenge/assets/25699351/aee59858-68dc-4bbd-8830-ff2a1b85eeb6)
+
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/your-username/currency-converter.git`

@@ -6,7 +6,7 @@ function ConversionResult({ baseCurrency, targetCurrency, conversionRate, conver
     <div className='exchange-rate'>
       <p>
         Conversion Rate ({baseCurrency}/{targetCurrency}):{' '}
-        {conversionRate.toFixed(4)}
+        <b>{conversionRate.toFixed(4)}</b>
       </p>
     </div>
   );

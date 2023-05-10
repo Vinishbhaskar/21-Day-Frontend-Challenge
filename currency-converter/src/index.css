@@ -117,13 +117,13 @@ body {
 
 /* Exchange Rate Styles */
 .exchange-rate {
-  font-size: 14px;
+  font-size: 12px;
   margin: 25px 0 20px;
 }
 
 /* Exchange Result Styles */
 .exchange-result {
-  font-size: 17px;
+  font-size: 16px;
   margin: 20px 0 30px;
 }
 

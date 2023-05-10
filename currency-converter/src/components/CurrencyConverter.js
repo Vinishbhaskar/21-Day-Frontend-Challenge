@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaExchangeAlt } from 'react-icons/fa';
 import axios from 'axios';
 import getAPIKey from '../data/apiKey';

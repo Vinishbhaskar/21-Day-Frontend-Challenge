@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaExchangeAlt } from "react-icons/fa";
+import { FaExchangeAlt } from 'react-icons/fa';
 import axios from 'axios';
 import getAPIKey from '../data/apiKey';
 import AmountInput from './AmountInput';
@@ -7,11 +7,10 @@ import CurrencySelect from './CurrencySelect';
 import ExchangeButton from './ExchangeButton';
 import ConversionResult from './ConversionResult';
 
-
 function CurrencyConverter() {
   const [amount, setAmount] = useState(1);
   const [baseCurrency, setBaseCurrency] = useState('USD');
-  const [targetCurrency, setTargetCurrency] = useState('EUR');
+  const [targetCurrency, setTargetCurrency] = useState('INR');
   const [conversionRate, setConversionRate] = useState(0);
   const [conversionResult, setConversionResult] = useState(0);
   const [currencies, setCurrencies] = useState([]);
@@ -47,45 +46,54 @@ function CurrencyConverter() {
       });
   };
 
+  const handleCurrencySwap = () => {
+    const temp = baseCurrency;
+    setBaseCurrency(targetCurrency);
+    setTargetCurrency(temp);
+  };
+
   return (
-     <div className="card">
-     <h2>Currency Converter</h2>
-     <div className="form">
-      <AmountInput amount={amount} setAmount={setAmount} className='input' />
-      <div className='drop-list'>
-      <CurrencySelect
-        label="From:"
-        currency={baseCurrency}
-        setCurrency={setBaseCurrency}
-        currencies={currencies}
-        
-      />
-      <FaExchangeAlt className='icon'/>
-      <CurrencySelect
-        label="To:"
-        currency={targetCurrency}
-        setCurrency={setTargetCurrency}
-        currencies={currencies}
-      />
-      </div>
-      {fetchingData ? (
-        <p>Loading...</p>
-      ) : (
-        <ConversionResult
-          baseCurrency={baseCurrency}
-          targetCurrency={targetCurrency}
-          conversionRate={conversionRate}
-          conversionResult={conversionResult}
-        />
-      )}
-      <div className='exchange-result'>
-          <p> 
-            {amount} {baseCurrency} = {amount*conversionResult.toFixed(2)}{' '}
+    <div className="card">
+      <h2>Currency Converter</h2>
+      <div className="form">
+        <AmountInput amount={amount} setAmount={setAmount} className="input" />
+        <div className="drop-list">
+          <CurrencySelect
+            label="From:"
+            currency={baseCurrency}
+            setCurrency={setBaseCurrency}
+            currencies={currencies}
+          />
+          <FaExchangeAlt className="icon" onClick={handleCurrencySwap} />
+          <CurrencySelect
+            label="To:"
+            currency={targetCurrency}
+            setCurrency={setTargetCurrency}
+            currencies={currencies}
+          />
+        </div>
+        {fetchingData ? (
+          <p>Loading...</p>
+        ) : (
+          <ConversionResult
+            baseCurrency={baseCurrency}
+            targetCurrency={targetCurrency}
+            conversionRate={conversionRate}
+            conversionResult={conversionResult}
+          />
+        )}
+        <div className="exchange-result">
+          <p>
+            {amount} {baseCurrency} = {amount * conversionResult.toFixed(2)}{' '}
             {targetCurrency}
           </p>
+        </div>
+        <ExchangeButton
+          className="button"
+          onClick={handleGetExchange}
+          disabled={fetchingData}
+        />
       </div>
-      <ExchangeButton className='button' onClick={handleGetExchange} disabled={fetchingData}  />
-    </div>
     </div>
   );
 }

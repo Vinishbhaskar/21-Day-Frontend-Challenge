@@ -1,65 +1,80 @@
-*{
+/* Global CSS */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+
+/* Body Styles */
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding: 0 10px;
-  background: #675AFE;
+  background: #393E46;
 }
-::selection{
+
+/* Text Selection Styles */
+::selection {
   color: #fff;
   background: #675AFE;
 }
-.card{
+
+/* Card Styles */
+.card {
   width: 370px;
   padding: 30px;
-  border-radius: 7px;
+  border-radius: 9px;
   background: #fff;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
 }
-.card h2{
+
+.card h2 {
   font-size: 28px;
   font-weight: 500;
   text-align: center;
 }
-.form{
+
+/* Form Styles */
+.form {
   margin: 40px 0 20px 0;
 }
-.form :where(input, select, button){
+
+.form :where(input, select, button) {
   width: 100%;
   outline: none;
   border-radius: 5px;
   border: none;
 }
-.form p{
+
+.form p {
   font-size: 18px;
   margin-bottom: 5px;
 }
-.form input{
+
+.form input {
   height: 50px;
   font-size: 17px;
   padding: 0 15px;
   border: 1px solid #999;
 }
-.form input:focus{
+
+.form input:focus {
   padding: 0 14px;
   border: 2px solid #675AFE;
 }
 
-.drop-list{
+/* Dropdown List Styles */
+.drop-list {
   display: flex;
   margin-top: 20px;
   align-items: center;
   justify-content: space-between;
 }
 
-.select-box{
+.select-box {
   display: flex;
   width: 115px;
   height: 45px;
@@ -68,43 +83,52 @@ body{
   justify-content: center;
   border: 1px solid #999;
 }
-.country-flag{
+
+.country-flag {
   max-width: 24px;
 }
-.select-box select{
+
+.select-box select {
   width: auto;
   font-size: 16px;
   background: none;
   margin: 0 -5px 0 5px;
 }
-.select-box select::-webkit-scrollbar{
+
+.select-box select::-webkit-scrollbar {
   width: 8px;
 }
-.select-box select::-webkit-scrollbar-track{
+
+.select-box select::-webkit-scrollbar-track {
   background: #fff;
 }
-.select-box select::-webkit-scrollbar-thumb{
+
+.select-box select::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 8px;
   border-right: 2px solid #ffffff;
 }
-.icon{
+
+.icon {
   cursor: pointer;
   margin-top: 22px;
   font-size: 22px;
 }
 
-.exchange-rate{
+/* Exchange Rate Styles */
+.exchange-rate {
   font-size: 14px;
   margin: 25px 0 20px;
 }
 
-.exchange-result{
+/* Exchange Result Styles */
+.exchange-result {
   font-size: 17px;
   margin: 20px 0 30px;
 }
 
-button{
+/* Button Styles */
+button {
   height: 52px;
   color: #fff;
   font-size: 17px;
@@ -112,6 +136,7 @@ button{
   background: #675AFE;
   transition: 0.3s ease;
 }
-form button:hover{
+
+button:hover {
   background: #4534fe;
 }

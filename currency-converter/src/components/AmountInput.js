@@ -1,5 +1,6 @@
 import React from 'react';
 
+// AmountInput component takes in `amount` and `setAmount` as props
 function AmountInput({ amount, setAmount }) {
   return (
     <div>

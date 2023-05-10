@@ -62,6 +62,14 @@ This project is licensed under the MIT License. You can find more information in
 
 ## Conclusion
 
+Completing Day 3 of the 21-day frontend development challenge was an exciting experience. 
+
 Currency Converter is a practical and efficient tool for currency conversion. Its simplicity, real-time data, and user-friendly interface make it a valuable asset for users in need of quick and accurate currency conversions. Feel free to explore the code, contribute, and adapt it to your specific needs. 💼💡
+
+Stay tuned for the upcoming projects in this challenge. I'll be sharing my progress, insights, and code breakdowns on LinkedIn. Make sure to follow me and join me on this exciting journey of frontend development.
+
+Follow my 21-day frontend development challenge on LinkedIn: [https://www.linkedin.com/in/vinishbhaskar/]
+
+Let's keep coding and learning together! 💻🚀
 
 Happy coding! 💻🚀

@@ -36,7 +36,7 @@ function QRCodeGenerator() {
   
 
   const generateQRCode = () => {
-    const apiUrl = `http://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(
+    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(
       text
     )}&size=${size}&color=${color}&format=${format}`;
 

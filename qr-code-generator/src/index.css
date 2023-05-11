@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+
+input[type='text'],
+input[type='number'],
+select {
+  margin-left: 10px;
+}
+
+button {
+  margin-top: 10px;
+}

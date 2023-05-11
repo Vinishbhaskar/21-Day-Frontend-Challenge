@@ -65,17 +65,15 @@ body {
 }
 
 /* Option Buttons */
-.size-option-btn,
-.color-option-btn,
-.format-option-btn {
+
+.option-btn {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 }
 
-.size-option-btn button,
-.color-option-btn button,
-.format-option-btn button {
+
+.option-btn button {
   display: flex;
   margin: 0 5px;
   cursor: pointer;
@@ -98,9 +96,8 @@ body {
 }
 
 /* Selected Option Buttons */
-.size-option-btn button.selected,
-.color-option-btn button.selected,
-.format-option-btn button.selected {
+
+.option-btn button.selected {
   background-color: #A6B1E1;
 }
 
@@ -152,4 +149,38 @@ body {
   .download-button button:hover {
     background: #4534fe;
   }
-  
+
+  @media screen and (max-width: 480px) {
+    .App {
+    padding: 20px;
+    }
+    
+    .input-container label {
+    font-size: 16px;
+    }
+    
+    .input-container input {
+    height: 40px;
+    font-size: 14px;
+    }
+    
+    .option-btn button {
+    padding: 8px;
+    font-size: 14px;
+    }
+    
+    .generate-button button {
+    height: 40px;
+    font-size: 14px;
+    }
+    
+    .generated-qr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+    
+    .download-button button {
+    height: 40px;
+    font-size: 14px;
+    }
+    }

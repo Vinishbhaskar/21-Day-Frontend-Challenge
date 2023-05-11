@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import DownloadButton from './DownloadButton';
+import GenerateButton from './GenerateButton';
+import SelectOption from './SelectOption';
 
 function QRCodeGenerator() {
   const [text, setText] = useState('');
@@ -23,11 +26,11 @@ function QRCodeGenerator() {
   ];
 
   const formatOptions = [
-    { value: 'png', label: 'PNG' },
-    { value: 'gif', label: 'GIF' },
-    { value: 'jpeg', label: 'JPEG' },
-    { value: 'jpg', label: 'JPG' },
-    { value: 'svg', label: 'SVG' },
+    { value: 'png', name: 'PNG' },
+    { value: 'gif', name: 'GIF' },
+    { value: 'jpeg', name: 'JPEG' },
+    { value: 'jpg', name: 'JPG' },
+    { value: 'svg', name: 'SVG' },
     // { value: 'eps', label: 'EPS' },
   ];
   
@@ -38,8 +41,6 @@ function QRCodeGenerator() {
     )}&size=${size}&color=${color}&format=${format}`;
 
     // Perform API request to generate QR code
-    // Use fetch or any other HTTP library of your choice
-    // Here's an example using fetch
     fetch(apiUrl)
       .then((response) => response.blob())
       .then((blob) => {
@@ -73,44 +74,26 @@ function QRCodeGenerator() {
       />
     </div>
 
-    <div className="size-option-btn">
-      {sizeOptions.map((option) => (
-        <button
-          key={option.value}
-          className={size === option.value ? 'selected' : ''}
-          onClick={() => setSize(option.value)}
-        >
-          {option.name}
-        </button>
-      ))}
-    </div>
+    <SelectOption
+        options={sizeOptions}
+        selectedOption={size}
+        setSelectedOption={setSize}
+    />
 
-    <div className="color-option-btn">
-        {colorOptions.map((option) => (
-        <button
-            key={option.value}
-            className={color === option.value ? 'selected' : ''}
-            style={{ backgroundColor: `#${option.colorCode}` }}
-            onClick={() => setColor(option.value)}>
-            {option.name}
-        </button>
-        ))}
-    </div>
+    <SelectOption
+        options={colorOptions}
+        selectedOption={color}
+        setSelectedOption={setColor}
+        colorOption
+    />
 
-    <div className="format-option-btn">
-        {formatOptions.map((option) => (
-        <button
-            key={option.value}
-            className={format === option.value ? 'selected' : ''}
-            onClick={() => setFormat(option.value)} >
-            {option.label}
-        </button>
-        ))}
-    </div>
+    <SelectOption
+        options={formatOptions}
+        selectedOption={format}
+        setSelectedOption={setFormat}
+    />
 
-    <div className="generate-button">
-      <button onClick={generateQRCode} disabled={!text}>Generate QR Code</button>
-    </div>
+    <GenerateButton onClick={generateQRCode} disabled={!text} />
 
     {generatedQRCode && (
       <div className="generated-qr-container">
@@ -118,7 +101,7 @@ function QRCodeGenerator() {
             <img src={generatedQRCode} alt="QR Code" />
         </div>
         <div className="download-button">
-          <button onClick={downloadQRCode}>Download QR Code</button>
+            <DownloadButton onClick={downloadQRCode} />
         </div>
       </div>
     )}

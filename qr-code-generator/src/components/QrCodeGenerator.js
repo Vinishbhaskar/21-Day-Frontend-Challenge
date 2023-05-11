@@ -3,23 +3,34 @@ import React, { useState } from 'react';
 function QRCodeGenerator() {
   const [text, setText] = useState('');
   const [size, setSize] = useState('200x200');
-  const [color, setColor] = useState('000000');
+  const [color, setColor] = useState('0-0-0');
   const [format, setFormat] = useState('png');
   const [generatedQRCode, setGeneratedQRCode] = useState(null);
 
   const colorOptions = [
-    { name: 'Black', value: '0-0-0' },
-    { name: 'Red', value: '255-0-0' },
-    { name: 'Green', value: '0-255-0' },
-    { name: 'Blue', value: '0-0-255' },
-    { name: 'Dark Olive Green', value: '85-107-47' }
-  ];
+  { name: 'Black', value: '0-0-0', colorCode: '#000000' },
+  { name: 'Red', value: '255-0-0', colorCode: '#FF0000' },
+  { name: 'Green', value: '0-255-0', colorCode: '#00FF00' },
+  { name: 'Blue', value: '0-0-255', colorCode: '#0000FF' },
+  { name: 'Orange', value: '253-127-32', colorCode: '#FD7F20' }
+];
+
 
   const sizeOptions = [
+    { name: '150x150', value: '150x150' },
     { name: '200x200', value: '200x200' },
-    { name: '300x300', value: '300x300' },
-    { name: '400x400', value: '400x400' }
+    { name: '300x300', value: '300x300' }
   ];
+
+  const formatOptions = [
+    { value: 'png', label: 'PNG' },
+    { value: 'gif', label: 'GIF' },
+    { value: 'jpeg', label: 'JPEG' },
+    { value: 'jpg', label: 'JPG' },
+    { value: 'svg', label: 'SVG' },
+    // { value: 'eps', label: 'EPS' },
+  ];
+  
 
   const generateQRCode = () => {
     const apiUrl = `http://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(
@@ -51,52 +62,67 @@ function QRCodeGenerator() {
   };
 
   return (
-    <div className="App">
-      <h1>QR Code Generator</h1>
+    <div className="QRCodeGenerator">
+    <h1>QR Code Generator</h1>
+    <div className="input-container">
       <input
         type="text"
-        placeholder="Enter text"
+        placeholder="Enter URL or Text"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <br />
-      <select value={size} onChange={(e) => setSize(e.target.value)}>
-        {sizeOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.name}
-          </option>
-        ))}
-      </select>
-      <br />
-      <select value={color} onChange={(e) => setColor(e.target.value)}>
-        {colorOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.name}
-          </option>
-        ))}
-      </select>
-      <br />
-      <select value={format} onChange={(e) => setFormat(e.target.value)}>
-        <option value="png">PNG</option>
-        <option value="gif">GIF</option>
-        <option value="jpeg">JPEG</option>
-        <option value="jpg">JPG</option>
-        <option value="svg">SVG</option>
-        <option value="eps">EPS</option>
-      </select>
-      <br />
-      <button onClick={generateQRCode}>Generate QR Code</button>
-      {generatedQRCode && (
-        <>
-          <br />
-          <br />
-          <img src={generatedQRCode} alt="QR Code" />
-          <br />
-          <br />
-          <button onClick={downloadQRCode}>Download QR Code</button>
-        </>
-      )}
     </div>
+
+    <div className="size-option-btn">
+      {sizeOptions.map((option) => (
+        <button
+          key={option.value}
+          className={size === option.value ? 'selected' : ''}
+          onClick={() => setSize(option.value)}
+        >
+          {option.name}
+        </button>
+      ))}
+    </div>
+
+    <div className="color-option-btn">
+        {colorOptions.map((option) => (
+        <button
+            key={option.value}
+            className={color === option.value ? 'selected' : ''}
+            style={{ backgroundColor: `#${option.colorCode}` }}
+            onClick={() => setColor(option.value)}>
+            {option.name}
+        </button>
+        ))}
+    </div>
+
+    <div className="format-option-btn">
+        {formatOptions.map((option) => (
+        <button
+            key={option.value}
+            className={format === option.value ? 'selected' : ''}
+            onClick={() => setFormat(option.value)} >
+            {option.label}
+        </button>
+        ))}
+    </div>
+
+    <div className="generate-button">
+      <button onClick={generateQRCode} disabled={!text}>Generate QR Code</button>
+    </div>
+
+    {generatedQRCode && (
+      <div className="generated-qr-container">
+        <div className="generated-qr">
+            <img src={generatedQRCode} alt="QR Code" />
+        </div>
+        <div className="download-button">
+          <button onClick={downloadQRCode}>Download QR Code</button>
+        </div>
+      </div>
+    )}
+  </div>
   );
 }
 

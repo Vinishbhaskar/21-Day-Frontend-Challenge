@@ -1,15 +1,155 @@
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: #393E46;
+}
+
+/* Text Selection Styles */
+::selection {
+  color: #fff;
+  background: #675AFE;
+}
+
+/* Card Styles */
 .App {
-  text-align: center;
-  margin: 20px;
+  width: 370px;
+  padding: 30px;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
 }
 
-
-input[type='text'],
-input[type='number'],
-select {
-  margin-left: 10px;
+/* QRCodeGenerator Styles */
+.QRCodeGenerator {
+  padding: 5px;
 }
 
-button {
-  margin-top: 10px;
+.input-container {
+  margin: 30px 0 25px 0;
 }
+
+.input-container input {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.input-container label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+  border: 1px solid #999;
+}
+
+.input-container input:focus {
+  padding: 0 14px;
+  border: 2px solid #675AFE;
+}
+
+/* Option Buttons */
+.size-option-btn,
+.color-option-btn,
+.format-option-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.size-option-btn button,
+.color-option-btn button,
+.format-option-btn button {
+  display: flex;
+  margin: 0 5px;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.color-option-btn button {
+  display: flex;
+  align-items: center;
+}
+
+.format-option-btn button {
+  display: flex;
+  align-items: center;
+}
+
+/* Selected Option Buttons */
+.size-option-btn button.selected,
+.color-option-btn button.selected,
+.format-option-btn button.selected {
+  background-color: #A6B1E1;
+}
+
+/* Generate Button */
+.generate-button button {
+  height: 52px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  background: #675AFE;
+  transition: 0.3s ease;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.generate-button button:hover {
+  background: #4534fe;
+}
+
+.generate-button {
+  margin-top: 25px;
+}
+
+/* Generated QR Code */
+.generated-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Download Button */
+.download-button button {
+  height: 52px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  background: #675AFE;
+  transition: 0.3s ease;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  }
+  
+  .download-button button:hover {
+    background: #4534fe;
+  }
+  

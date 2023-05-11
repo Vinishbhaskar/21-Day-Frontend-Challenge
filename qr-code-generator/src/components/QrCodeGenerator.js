@@ -7,12 +7,28 @@ function QRCodeGenerator() {
   const [format, setFormat] = useState('png');
   const [generatedQRCode, setGeneratedQRCode] = useState(null);
 
+  const colorOptions = [
+    { name: 'Black', value: '0-0-0' },
+    { name: 'Red', value: '255-0-0' },
+    { name: 'Green', value: '0-255-0' },
+    { name: 'Blue', value: '0-0-255' },
+    { name: 'Dark Olive Green', value: '85-107-47' }
+  ];
+
+  const sizeOptions = [
+    { name: '200x200', value: '200x200' },
+    { name: '300x300', value: '300x300' },
+    { name: '400x400', value: '400x400' }
+  ];
+
   const generateQRCode = () => {
     const apiUrl = `http://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(
       text
     )}&size=${size}&color=${color}&format=${format}`;
 
     // Perform API request to generate QR code
+    // Use fetch or any other HTTP library of your choice
+    // Here's an example using fetch
     fetch(apiUrl)
       .then((response) => response.blob())
       .then((blob) => {
@@ -44,19 +60,21 @@ function QRCodeGenerator() {
         onChange={(e) => setText(e.target.value)}
       />
       <br />
-      <input
-        type="text"
-        placeholder="Size (e.g., 200x200)"
-        value={size}
-        onChange={(e) => setSize(e.target.value)}
-      />
+      <select value={size} onChange={(e) => setSize(e.target.value)}>
+        {sizeOptions.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.name}
+          </option>
+        ))}
+      </select>
       <br />
-      <input
-        type="text"
-        placeholder="Color (e.g., 000000)"
-        value={color}
-        onChange={(e) => setColor(e.target.value)}
-      />
+      <select value={color} onChange={(e) => setColor(e.target.value)}>
+        {colorOptions.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.name}
+          </option>
+        ))}
+      </select>
       <br />
       <select value={format} onChange={(e) => setFormat(e.target.value)}>
         <option value="png">PNG</option>
@@ -83,3 +101,4 @@ function QRCodeGenerator() {
 }
 
 export default QRCodeGenerator;
+

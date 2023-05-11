@@ -156,7 +156,7 @@ body {
   .download-button button:hover {
     background: #4534fe;
   }
-
+  
   @media screen and (max-width: 480px) {
     .App {
     padding: 20px;
@@ -172,7 +172,6 @@ body {
     }
     
     .option-btn button {
-    padding: 8px;
     font-size: 14px;
     }
     

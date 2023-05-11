@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import DownloadButton from './DownloadButton';
 import GenerateButton from './GenerateButton';
 import SelectOption from './SelectOption';
@@ -36,6 +38,13 @@ function QRCodeGenerator() {
   
 
   const generateQRCode = () => {
+    if (!text) {
+        toast.error('Please enter a URL or text', {
+          position: toast.POSITION.TOP_CENTER
+        });
+        return;
+      }
+
     const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(
       text
     )}&size=${size}&color=${color}&format=${format}`;
@@ -64,7 +73,7 @@ function QRCodeGenerator() {
 
   return (
     <div className="QRCodeGenerator">
-    <h1>QR Code Generator</h1>
+    <h1>QR Code Generator </h1>
     <div className="input-container">
       <input
         type="text"
@@ -73,7 +82,6 @@ function QRCodeGenerator() {
         onChange={(e) => setText(e.target.value)}
       />
     </div>
-
     <SelectOption
         options={sizeOptions}
         selectedOption={size}
@@ -93,7 +101,7 @@ function QRCodeGenerator() {
         setSelectedOption={setFormat}
     />
 
-    <GenerateButton onClick={generateQRCode} disabled={!text} />
+    <GenerateButton onClick={generateQRCode}  />
 
     {generatedQRCode && (
       <div className="generated-qr-container">
@@ -105,6 +113,7 @@ function QRCodeGenerator() {
         </div>
       </div>
     )}
+    <ToastContainer position={toast.POSITION.TOP_CENTER} />
   </div>
   );
 }

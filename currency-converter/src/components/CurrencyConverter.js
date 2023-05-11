@@ -17,6 +17,7 @@ function CurrencyConverter() {
   const [fetchingData, setFetchingData] = useState(false);
 
   const apiKey = getAPIKey();
+  
 
   useEffect(() => {
     axios
@@ -50,7 +51,12 @@ function CurrencyConverter() {
     const temp = baseCurrency;
     setBaseCurrency(targetCurrency);
     setTargetCurrency(temp);
+
+    // Recalculate the conversion result after swapping currencies
+    setConversionResult(conversionResult / conversionRate);
+    setConversionRate(1 / conversionRate);
   };
+  const ExchangeResult = amount * conversionResult.toFixed(2);
 
   return (
     <div className="card">
@@ -83,10 +89,12 @@ function CurrencyConverter() {
           />
         )}
         <div className="exchange-result">
+        {ExchangeResult === 0  ? <p>{amount} {baseCurrency} = ____</p>:
           <p>
-            {amount} {baseCurrency} = {amount * conversionResult.toFixed(2)}{' '}
+            {amount} {baseCurrency} = {ExchangeResult}{' '}
             {targetCurrency}
           </p>
+        }
         </div>
         <ExchangeButton
           className="button"

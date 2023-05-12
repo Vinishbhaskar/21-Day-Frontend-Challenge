@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {FaRegStickyNote} from "react-icons/fa";
 import { v4 as uuidv4 } from 'uuid';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import NoteForm from './components/NoteForm';
 import NoteList from './components/NoteList';
@@ -22,6 +24,9 @@ function App(){
     const updatedNotes = [...notes, newNote];
     setNotes(updatedNotes);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
+
+    // Show a success toast notification after adding a note
+    toast.success('Note added successfully!');
   };
   
 
@@ -30,6 +35,9 @@ function App(){
     updatedNotes.splice(index, 1);
     setNotes(updatedNotes);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
+
+    // Show a Warn toast notification after deleting a note
+    toast.error('Note deleted successfully!');
   };
   
   const updateNote = (id, title, content) => {
@@ -47,6 +55,9 @@ function App(){
     setNotes(updatedNotes);
     setEditingNote(null);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
+
+    // Show a success toast notification after updating a note
+    toast.success('Note updated successfully!');
   };
 
   const cancelEdit = () => {
@@ -87,6 +98,8 @@ function App(){
       />
       </div>
       <NoteList notes={filteredNotes} deleteNote={deleteNote} setEditingNote={setEditingNote} />
+
+      <ToastContainer />
     </div>
   );
 };

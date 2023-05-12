@@ -49,7 +49,6 @@ To run the Notes Keeping App locally, follow these steps:
 ## Technologies Used
 
 - React JS
-- React Router
 - uuidv4
 - CSS
 
@@ -64,7 +63,6 @@ This project is licensed under the [MIT License](insert-license-url-here).
 ## Acknowledgements
 
 - [React](https://reactjs.org/)
-- [React Router](https://reactrouter.com/)
 - [uuidv4](https://www.npmjs.com/package/uuidv4)
 
 ## Conclusion

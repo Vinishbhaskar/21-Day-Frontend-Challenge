@@ -2,6 +2,8 @@
 
 This is a QR Code Generator application built with React. It allows you to generate QR codes by entering a URL or text and customizing various options such as size, color, and format. 🚀
 
+Link to live demo : https://qr-code-generator-21day.netlify.app/
+
 ## Features ✨
 
 - Enter a URL or text to generate a QR code. 🔗
@@ -9,10 +11,6 @@ This is a QR Code Generator application built with React. It allows you to gener
 - Choose from different color options for the QR code. 🎨
 - Select the format of the generated QR code (PNG, GIF, JPEG, etc.). 🖼️
 - Download the generated QR code. ⬇️
-
-## Demo 🌐
-
-[Link to live demo](https://qr-code-generator-21day.netlify.app/) 
 
 ## Screenshots 📷
 

@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Notes Keeping App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Notes Keeping App is a web application developed using React JS that allows users to create and manage their notes effortlessly.
 
-## Available Scripts
+![image](https://github.com/Vinishbhaskar/21-Day-Frontend-Challenge/assets/25699351/0391f71b-8336-425d-bf74-bb9757d79379)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Create new notes with a title and content.
+- Delete unwanted notes.
+- Edit existing notes and track the last updated timestamp.
+- Search for specific notes based on title or content.
+- Persistent storage using local storage.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Check out the live demo of the Notes Keeping App [here](https://notes-keeper-21day.netlify.app/).
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the Notes Keeping App locally, follow these steps:
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/Vinishbhaskar/21-Day-Frontend-Challenge
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd notes-keeping-app
+   ```
 
-### `npm run eject`
+3. Install the dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Open your browser and visit `http://localhost:3000` to see the app in action.
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React JS
+- React Router
+- uuidv4
+- CSS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Contributions are welcome! If you find any bugs or want to enhance the app, feel free to open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the [MIT License](insert-license-url-here).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgements
 
-### Making a Progressive Web App
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [uuidv4](https://www.npmjs.com/package/uuidv4)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Conclusion
 
-### Advanced Configuration
+Completing Day 5 of the 21-day frontend development challenge was an exciting experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The Notes Keeping App features a user-friendly interface with a clean and intuitive design. Users can easily create, edit, and delete notes. The search functionality allows them to quickly find specific notes, making the app efficient and convenient to use.
 
-### Deployment
+Stay tuned for the upcoming projects in this challenge. I'll be sharing my progress, insights, and code breakdowns on LinkedIn. Make sure to follow me and join me on this exciting journey of frontend development.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Follow my 21-day frontend development challenge on LinkedIn: [https://www.linkedin.com/in/vinishbhaskar/]
 
-### `npm run build` fails to minify
+Let's keep coding and learning together! 💻🚀
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding! 💻🚀

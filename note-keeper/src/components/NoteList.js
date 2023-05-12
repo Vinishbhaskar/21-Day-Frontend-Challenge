@@ -1,4 +1,6 @@
 import React from 'react';
+import {FaEdit, FaTrashAlt} from "react-icons/fa";
+
 
 function NoteList({ notes, deleteNote, setEditingNote }) {
   const handleEditNote = (note) => {
@@ -31,10 +33,10 @@ function NoteList({ notes, deleteNote, setEditingNote }) {
           </p>
           <div className="note-buttons">
             <button className="edit-button" onClick={() => handleEditNote(note)}>
-              Edit
+              Edit <FaEdit className='icon'/>
             </button>
             <button className="delete-button" onClick={() => deleteNote(note.id)}>
-              Delete
+              Delete <FaTrashAlt className='icon'/>
             </button>
           </div>
         </div>

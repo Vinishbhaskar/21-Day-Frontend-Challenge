@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {FaRegStickyNote} from "react-icons/fa";
 import { v4 as uuidv4 } from 'uuid';
 
 import NoteForm from './components/NoteForm';
@@ -67,7 +68,7 @@ function App(){
 
   return (
     <div className="app">
-      <h1>Notes App</h1>
+      <h1>Notes Keeping App <FaRegStickyNote className='icon'/></h1>
       {editingNote ? (
         <NoteEditor
           note={editingNote}
@@ -77,13 +78,14 @@ function App(){
       ) : (
         <NoteForm addNote={addNote} />
       )}
-      <input
+      <div className='search-input-container'><input
         type="text"
         placeholder="Search"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         className="search-input"
       />
+      </div>
       <NoteList notes={filteredNotes} deleteNote={deleteNote} setEditingNote={setEditingNote} />
     </div>
   );

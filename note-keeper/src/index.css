@@ -1,3 +1,15 @@
+/* Global CSS */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styles */
+body {
+  align-items: center;
+  justify-content: center;
+  background: #EEEEEE;
+}
+
 /* General styles */
 .app {
   max-width: 800px;
@@ -5,16 +17,26 @@
   padding: 20px;
 }
 
-.app-title {
+.app h1 {
   text-align: center;
-  color: #333;
-  font-size: 24px;
+  color: #232323;
+  font-size: 28px;
   margin-bottom: 20px;
+}
+
+.app h1 > .icon{
+  margin-bottom: -05px;
+}
+
+.icon{
+  margin-bottom: -02px;
 }
 
 /* NoteForm styles */
 .note-form {
+  margin-top: 20px;
   margin-bottom: 20px;
+  padding-right: 20px;
 }
 
 .note-form input,
@@ -26,14 +48,20 @@
   border-radius: 4px;
 }
 
+.note-form textarea {
+  height: 60px
+}
+
 .note-form button {
   padding: 8px 16px;
-  background-color: #333;
+  background-color: #4caf50; /* Green color */
   color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
+  
 }
 
 /* NoteList styles */
@@ -43,26 +71,25 @@
   grid-gap: 20px;
 }
 
-@media (max-width: 600px) {
-  .note-list {
-    grid-template-columns: 1fr;
-  }
-}
 
 .note {
+  background-color: #f9f9f9; /* Light gray color */
   padding: 10px;
   border-radius: 4px;
-  color: #333;
-  font-size: 18px;
 }
 
 .note h2 {
+  /* color: #333; */
+  /* font-size: 18px; */
   margin-bottom: 10px;
 }
 
 .note p {
+  /* color: #666; */
+  font-size: 16px;
   margin-bottom: 10px;
 }
+
 
 .note-buttons {
   display: flex;
@@ -80,33 +107,19 @@
   cursor: pointer;
 }
 
-.edit-button {
-  background-color: #0096c7; /* Cool blue color */
+.note-buttons .edit-button {
+  background-color: #2196f3; /* Blue color */
 }
 
-.delete-button {
-  background-color: #f31b47; /* Cool red color */
-}
-
-.save-button {
-  background-color: #ffbd00; /* Cool yellow color */
-}
-
-.add-button {
-  background-color: #47b881; /* Cool green color */
-}
-
-.cancel-button{
-  background-color: #0096c7; /* Cool blue color */
-}
-
-.save-button{
-  background-color: #0096c7;
+.note-buttons .delete-button {
+  background-color: #f44336; /* Red color */
 }
 
 /* NoteEditor styles */
 .note-editor {
   margin-bottom: 20px;
+  padding-right: 20px;
+
 }
 
 .note-editor input,
@@ -127,12 +140,18 @@
 .note-editor .buttons button {
   padding: 8px 16px;
   margin-left: 10px;
-  background-color: #333;
+  background-color: #2196f3; /* Blue color */
   color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.search-input-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }
 
 .search-input {
@@ -142,3 +161,13 @@
   border-radius: 4px;
   font-size: 16px;
 }
+
+@media (max-width: 600px) {
+  .note-list {
+    grid-template-columns: 1fr;
+  }
+  .search-input {
+    width: 100%;
+  }
+}
+

@@ -28,7 +28,7 @@ function NoteForm({ addNote }) {
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
-      <button type="submit" className="note-button">Add Note</button>
+      <button type="submit" className="note-button-add">Add Note</button>
     </form>
   );
 }

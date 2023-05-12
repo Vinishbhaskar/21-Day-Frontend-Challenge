@@ -29,7 +29,7 @@ To run the Notes Keeping App locally, follow these steps:
 2. Navigate to the project directory:
 
    ```bash
-   cd notes-keeping-app
+   cd notes-keeper
    ```
 
 3. Install the dependencies:
@@ -49,6 +49,7 @@ To run the Notes Keeping App locally, follow these steps:
 ## Technologies Used
 
 - React JS
+- React-toastify
 - uuidv4
 - CSS
 
@@ -64,6 +65,7 @@ This project is licensed under the [MIT License](insert-license-url-here).
 
 - [React](https://reactjs.org/)
 - [uuidv4](https://www.npmjs.com/package/uuidv4)
+- [React-toastify](https://fkhadra.github.io/react-toastify)
 
 ## Conclusion
 

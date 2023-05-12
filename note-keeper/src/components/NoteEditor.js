@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NoteEditor = ({ note, updateNote, cancelEdit }) => {
+function NoteEditor({ note, updateNote, cancelEdit }) {
   const [editedTitle, setEditedTitle] = useState(note.title);
   const [editedContent, setEditedContent] = useState(note.content);
 
@@ -22,10 +22,12 @@ const NoteEditor = ({ note, updateNote, cancelEdit }) => {
         type="text"
         value={editedTitle}
         onChange={handleTitleChange}
+        className="note-input"
       />
       <textarea
         value={editedContent}
         onChange={handleContentChange}
+        className="note-textarea"
       ></textarea>
       <div className="buttons">
         <button className="cancel-button" onClick={cancelEdit}>
@@ -37,6 +39,6 @@ const NoteEditor = ({ note, updateNote, cancelEdit }) => {
       </div>
     </div>
   );
-};
+}
 
 export default NoteEditor;

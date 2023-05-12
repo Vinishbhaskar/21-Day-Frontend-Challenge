@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NoteList = ({ notes, deleteNote, setEditingNote }) => {
+function NoteList({ notes, deleteNote, setEditingNote }) {
   const handleEditNote = (note) => {
     setEditingNote(note);
   };
@@ -16,7 +16,7 @@ const NoteList = ({ notes, deleteNote, setEditingNote }) => {
         <div className="note" key={note.id}>
           <h2>{note.title}</h2>
           <p>{note.content}</p>
-          <p>
+          <p className="note-date">
             {note.updatedAt ? (
               `Last Updated: ${formatDate(note.updatedAt)}`
             ) : (
@@ -24,13 +24,17 @@ const NoteList = ({ notes, deleteNote, setEditingNote }) => {
             )}
           </p>
           <div className="note-buttons">
-            <button onClick={() => handleEditNote(note)}>Edit</button>
-            <button onClick={() => deleteNote(note.id)}>Delete</button>
+            <button className="edit-button" onClick={() => handleEditNote(note)}>
+              Edit
+            </button>
+            <button className="delete-button" onClick={() => deleteNote(note.id)}>
+              Delete
+            </button>
           </div>
         </div>
       ))}
     </div>
   );
-};
+}
 
 export default NoteList;

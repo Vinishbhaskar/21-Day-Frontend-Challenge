@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NoteForm = ({ addNote }) => {
+function NoteForm({ addNote }) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -31,6 +31,6 @@ const NoteForm = ({ addNote }) => {
       <button type="submit" className="note-button">Add Note</button>
     </form>
   );
-};
+}
 
 export default NoteForm;

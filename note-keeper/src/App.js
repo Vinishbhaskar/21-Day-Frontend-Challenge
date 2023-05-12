@@ -4,8 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import NoteForm from './components/NoteForm';
 import NoteList from './components/NoteList';
 import NoteEditor from './components/NoteEditor';
-
-const App = () => {
+function App() {
   const [notes, setNotes] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [editingNote, setEditingNote] = useState(null);
@@ -22,29 +21,29 @@ const App = () => {
     setNotes(updatedNotes);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
   };
-  
 
-  const deleteNote = (index) => {
-    const updatedNotes = [...notes];
-    updatedNotes.splice(index, 1);
+  const deleteNote = (id) => {
+    const updatedNotes = notes.filter((note) => note.id !== id);
     setNotes(updatedNotes);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
   };
-  
-  const updateNote = (index, title, content) => {
-    const updatedNotes = [...notes];
-    const updatedNote = {
-      ...updatedNotes[index],
-      title,
-      content,
-      updatedAt: new Date().toISOString(),
-    };
-    updatedNotes[index] = updatedNote;
+
+  const updateNote = (id, title, content) => {
+    const updatedNotes = notes.map((note) => {
+      if (note.id === id) {
+        return {
+          ...note,
+          title,
+          content,
+          updatedAt: new Date().toISOString(),
+        };
+      }
+      return note;
+    });
     setNotes(updatedNotes);
     setEditingNote(null);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
-  };  
-  
+  };
 
   const cancelEdit = () => {
     setEditingNote(null);
@@ -81,9 +80,13 @@ const App = () => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <NoteList notes={filteredNotes} deleteNote={deleteNote} setEditingNote={setEditingNote} />
+      <NoteList
+        notes={filteredNotes}
+        deleteNote={deleteNote}
+        setEditingNote={setEditingNote}
+      />
     </div>
   );
-};
+}
 
 export default App;

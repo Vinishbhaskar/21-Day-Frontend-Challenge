@@ -4,7 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 import NoteForm from './components/NoteForm';
 import NoteList from './components/NoteList';
 import NoteEditor from './components/NoteEditor';
-function App() {
+
+function App(){
   const [notes, setNotes] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [editingNote, setEditingNote] = useState(null);
@@ -21,13 +22,15 @@ function App() {
     setNotes(updatedNotes);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
   };
+  
 
-  const deleteNote = (id) => {
-    const updatedNotes = notes.filter((note) => note.id !== id);
+  const deleteNote = (index) => {
+    const updatedNotes = [...notes];
+    updatedNotes.splice(index, 1);
     setNotes(updatedNotes);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
   };
-
+  
   const updateNote = (id, title, content) => {
     const updatedNotes = notes.map((note) => {
       if (note.id === id) {
@@ -79,14 +82,11 @@ function App() {
         placeholder="Search"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
+        className="search-input"
       />
-      <NoteList
-        notes={filteredNotes}
-        deleteNote={deleteNote}
-        setEditingNote={setEditingNote}
-      />
+      <NoteList notes={filteredNotes} deleteNote={deleteNote} setEditingNote={setEditingNote} />
     </div>
   );
-}
+};
 
 export default App;

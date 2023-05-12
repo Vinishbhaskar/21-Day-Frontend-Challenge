@@ -10,10 +10,16 @@ function NoteList({ notes, deleteNote, setEditingNote }) {
     return date.toLocaleString();
   };
 
+  const getRandomColor = () => {
+    const colors = ['#8db5e1', '#ffb6c1', '#f2e593', '#b7e2b2'];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  };
+
   return (
     <div className="note-list">
       {notes.map((note) => (
-        <div className="note" key={note.id}>
+        <div className="note" key={note.id} style={{ backgroundColor: getRandomColor() }}>
           <h2>{note.title}</h2>
           <p>{note.content}</p>
           <p className="note-date">

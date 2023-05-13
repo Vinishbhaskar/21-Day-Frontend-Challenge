@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# URL Shortener
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+URL Shortener is a web application built with React JS that allows users to shorten long URLs into concise and manageable links. It leverages the Bitly API for URL shortening functionality and provides a user-friendly interface for creating and managing shortened URLs.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Shorten long URLs into compact links using the Bitly API.
+- View and manage your URL history, including the original URL, shortened URL, and creation timestamp.
+- Responsive design for optimal usage across various devices.
+- Copy shortened URLs to the clipboard with a single click.
+- Toastify integration for elegant and customizable toast notifications.
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can try out the URL Shortener live [here](https://url-shortener-21day.netlify.app/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the URL Shortener locally, follow these steps:
 
-### `npm run build`
+1. Clone the repository: `git clone https://github.com/Vinishbhaskar/21-Day-Frontend-Challenge`
+2. Navigate to the project directory: `cd url-shortener`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your web browser and visit: `http://localhost:3000`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React JS
+- Bitly API
+- HTML/CSS
+- Axios
+- Toastify
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+Included some screenshots of the application here to showcase its functionality and design.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://github.com/Vinishbhaskar/21-Day-Frontend-Challenge/assets/25699351/7ff6ef38-4430-47c8-a7e1-d1748bfad84d)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Fork the repository.
+2. Create a new branch: `git checkout -b my-new-feature`
+3. Make your changes and commit them: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-### Analyzing the Bundle Size
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [React](https://reactjs.org/)
+- [Bitly API](https://dev.bitly.com/api-reference/)
+- [React-toastify](https://fkhadra.github.io/react-toastify)
 
-### Making a Progressive Web App
+## Conclusion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Completing Day 6 of the 21-day frontend development challenge was an exciting experience.
 
-### Advanced Configuration
+The URL Shortener is a handy tool that allows users to shorten long URLs into concise and manageable links. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Users can input long URLs into the app, and with a single click, the app generates a shortened version of the URL using the powerful Bitly API. This allows users to share and distribute shorter links without compromising functionality.
 
-### Deployment
+Stay tuned for the upcoming projects in this challenge. I'll be sharing my progress, insights, and code breakdowns on LinkedIn. Make sure to follow me and join me on this exciting journey of frontend development.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Follow my 21-day frontend development challenge on LinkedIn: [https://www.linkedin.com/in/vinishbhaskar/]
 
-### `npm run build` fails to minify
+Let's keep coding and learning together! 💻🚀
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding! 💻🚀

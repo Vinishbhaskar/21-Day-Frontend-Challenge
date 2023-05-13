@@ -14,6 +14,15 @@ The projects are categorized into three sets of seven days:
 - **Intermediate Projects (Days 8-14):** These projects will push me to apply advanced concepts and build more complex applications.
 - **Advanced Projects (Days 15-21):** These projects will challenge me to dive deep into advanced React techniques and explore additional libraries and frameworks.
 
+## Compeleted :
+
+1. Day 1 :  [Todo List App](https://todo-application-21day-react.netlify.app/)
+2. Day 2 :  [Random Quote Generator](https://random-quote-generator-21day.netlify.app/)
+3. Day 3 :  [Currency Converter](currency-converter-21day.netlify.app)
+4. Day 4 :  [QR Code Generator](https://qr-code-generator-21day.netlify.app/)
+5. Day 5 :  [Notes Keeping App](https://notes-keeper-21day.netlify.app/)
+6. Day 6 : .....
+
 ## Project List 📝
 
 Here's a sneak peek of some of the projects I will be working on:

@@ -9,7 +9,7 @@ const ShortenedUrl = ({ url, onCopy }) => {
   return (
     <div className="shortened-url">
       <p>Shortened URL: {url}</p>
-      <button className="copy-button" onClick={handleCopy}>Copy</button>
+      <button className="copy-button-shorten" onClick={handleCopy}>Copy</button>
     </div>
   );
 };

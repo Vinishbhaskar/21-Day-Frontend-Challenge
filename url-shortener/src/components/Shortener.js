@@ -47,6 +47,7 @@ const Shortener = () => {
         shortUrl: shortenedUrl,
         createdAt: new Date().toISOString(),
       };
+      
       const updatedHistory = [historyItem, ...urlHistory];
       setUrlHistory(updatedHistory);
       localStorage.setItem('urlHistory', JSON.stringify(updatedHistory));

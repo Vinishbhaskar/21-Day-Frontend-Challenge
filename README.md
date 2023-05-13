@@ -16,7 +16,7 @@ The projects are categorized into three sets of seven days:
 
 ## Compeleted :
   
-  Basic Projects (Days 1-7): These projects will help me strengthen my foundational skills in React.
+  Basic Projects (Days 1-7): These projects helped me strengthen my foundational skills in React Js.
   
 - Day 1 :  [Todo List App](https://todo-application-21day-react.netlify.app/)
 - Day 2 :  [Random Quote Generator](https://random-quote-generator-21day.netlify.app/)

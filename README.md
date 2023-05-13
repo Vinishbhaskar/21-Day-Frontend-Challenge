@@ -16,12 +16,12 @@ The projects are categorized into three sets of seven days:
 
 ## Compeleted :
 
-1. Day 1 :  [Todo List App](https://todo-application-21day-react.netlify.app/)
-2. Day 2 :  [Random Quote Generator](https://random-quote-generator-21day.netlify.app/)
-3. Day 3 :  [Currency Converter](currency-converter-21day.netlify.app)
-4. Day 4 :  [QR Code Generator](https://qr-code-generator-21day.netlify.app/)
-5. Day 5 :  [Notes Keeping App](https://notes-keeper-21day.netlify.app/)
-6. Day 6 : .....
+- Day 1 :  [Todo List App](https://todo-application-21day-react.netlify.app/)
+- Day 2 :  [Random Quote Generator](https://random-quote-generator-21day.netlify.app/)
+- Day 3 :  [Currency Converter](currency-converter-21day.netlify.app)
+- Day 4 :  [QR Code Generator](https://qr-code-generator-21day.netlify.app/)
+- Day 5 :  [Notes Keeping App](https://notes-keeper-21day.netlify.app/)
+- Day 6 : .....
 
 ## Project List 📝
 

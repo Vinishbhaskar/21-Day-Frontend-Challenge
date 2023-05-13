@@ -53,7 +53,7 @@ h1 {
 .url-input {
   flex-grow: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px 0 0 5px;
   font-size: 16px;
 }
@@ -186,6 +186,7 @@ h1 {
     width: 100%;
     padding: 10px;
     height: 98vh;
+    min-width:0
   }
   
 }

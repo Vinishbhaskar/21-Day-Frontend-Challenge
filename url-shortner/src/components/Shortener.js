@@ -65,10 +65,14 @@ const Shortener = () => {
   return (
     <div className="shortener-container">
       <h1>URL Shortener</h1>
+      
       <InputForm onSubmit={handleSubmit} />
+
       {shortUrl && <ShortenedUrl url={shortUrl} onCopy={handleCopy} />}
+
       {copied && <p className="copy-message">URL copied to clipboard!</p>}
-      <URLHistory history={urlHistory} onClearHistory={handleClearHistory} />
+
+      {urlHistory.length > 0 && <URLHistory history={urlHistory} onClearHistory={handleClearHistory} />}
     </div>
   );
 };

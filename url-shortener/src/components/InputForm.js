@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const InputForm = ({ onSubmit }) => {
+function InputForm({ onSubmit }){
   const [url, setUrl] = useState('');
 
   const handleChange = (e) => {

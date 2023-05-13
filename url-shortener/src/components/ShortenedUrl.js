@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShortenedUrl = ({ url, onCopy }) => {
+function ShortenedUrl({ url, onCopy }){
   const handleCopy = () => {
     navigator.clipboard.writeText(url);
     onCopy();

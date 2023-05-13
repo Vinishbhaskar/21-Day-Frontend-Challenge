@@ -1,7 +1,7 @@
 import React from 'react';
 import Shortener from './components/Shortener';
 
-const App = () => {
+function App(){
   return (
     <div className="App">
       <Shortener />

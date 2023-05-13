@@ -4,7 +4,7 @@ import InputForm from './InputForm';
 import ShortenedUrl from './ShortenedUrl';
 import URLHistory from './UrlHistory';
 
-const Shortener = () => {
+function Shortener() {
   const [shortUrl, setShortUrl] = useState('');
   const [copied, setCopied] = useState(false);
   const [urlHistory, setUrlHistory] = useState([]);
@@ -47,7 +47,7 @@ const Shortener = () => {
         shortUrl: shortenedUrl,
         createdAt: new Date().toISOString(),
       };
-      
+
       const updatedHistory = [historyItem, ...urlHistory];
       setUrlHistory(updatedHistory);
       localStorage.setItem('urlHistory', JSON.stringify(updatedHistory));

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const URLHistory = ({ history, onClearHistory }) => {
+function URLHistory({ history, onClearHistory }){
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const formattedDate = date.toLocaleDateString();

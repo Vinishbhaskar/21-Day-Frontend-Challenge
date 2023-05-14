@@ -4,6 +4,7 @@ function ShortenedUrl({ url, onCopy }){
   const handleCopy = () => {
     navigator.clipboard.writeText(url);
     onCopy();
+    
   };
 
   return (

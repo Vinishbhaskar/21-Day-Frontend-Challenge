@@ -1,4 +1,6 @@
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function URLHistory({ history, onClearHistory }){
   const formatDate = (dateString) => {
@@ -11,6 +13,14 @@ function URLHistory({ history, onClearHistory }){
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
   };
+
+  const handleClearHistory = () => {
+    if (history.length > 0) {
+      onClearHistory();
+      toast.warn('URL history cleared!');
+    }
+  };
+
 
   return (
     <div className="url-history">
@@ -37,7 +47,9 @@ function URLHistory({ history, onClearHistory }){
           ))}
         </tbody>
       </table>
-      <button onClick={onClearHistory}>Clear History</button>
+      <button onClick={handleClearHistory}>Clear History</button>
+
+      <ToastContainer />
     </div>
   );
 };

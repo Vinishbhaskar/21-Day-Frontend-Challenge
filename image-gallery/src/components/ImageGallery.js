@@ -22,7 +22,7 @@ const ImageGallery = () => {
             `https://api.unsplash.com/photos/random?count=10&query=${searchQuery}&page=${page}`,
             {
               headers: {
-                Authorization: 'Client-ID vN5uCPXyoX64a_Bhz26KWedAJWKRXC2F7egXq3BQwPc',
+                Authorization: 'Client-ID RFtf6XK_wUURd6cRpNEHuxbb6Miheel_OYU-L8tV3vM',
               },
             }
           );

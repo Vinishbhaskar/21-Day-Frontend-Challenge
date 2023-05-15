@@ -7,8 +7,8 @@ const ImageModal = ({ image, onClose }) => {
         <span className="close" onClick={onClose}>&times;</span>
         <img src={image.urls.regular} alt={image.alt_description} />
         <div className="image-details">
-          <p>Photographer: {image.user.name}</p>
-          <p>Username: {image.user.username}</p>
+          <p><b>Photographer:</b> {image.user.name}</p>
+          <p><b>Username: </b>{image.user.username}</p>
         </div>
       </div>
     </div>

@@ -8,9 +8,9 @@ const ImageCard = ({ image, onClick, onFavorite }) => {
         alt={image.alt_description}
         onClick={() => onClick(image)}
       />
-      <div className="image-card-details">
-        {/* <p>Photographer: {image.user.name}</p> */}
-      </div>
+      {/* <div className="image-card-details">
+        <p>Photographer: {image.user.name}</p>
+      </div> */}
     </div>
   );
 };

@@ -22,13 +22,10 @@ const ImageGallery = () => {
             `https://api.unsplash.com/photos/random?count=10&query=${searchQuery}&page=${page}`,
             {
               headers: {
-                Authorization: 'Client-ID RFtf6XK_wUURd6cRpNEHuxbb6Miheel_OYU-L8tV3vM',
+                Authorization: `Client-ID ${process.env.REACT_APP_API_KEY}`,
               },
             }
-          );
-
-          // vN5uCPXyoX64a_Bhz26KWedAJWKRXC2F7egXq3BQwPc
-          // RFtf6XK_wUURd6cRpNEHuxbb6Miheel_OYU-L8tV3vM
+          );          
 
           const newImages = response.data.map((image) => ({
             id: image.id,

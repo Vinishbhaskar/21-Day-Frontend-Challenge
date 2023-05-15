@@ -22,7 +22,7 @@ function Shortener() {
   };
 
   const handleSubmit = async (url) => {
-    const accessToken = 'ff8fb38b04e62a8229fed86216b99b4e1726a70b'; // Replace with your actual access token
+    const accessToken = `${process.env.REACT_APP_API_KEY}`; // Replace with your actual access token
     const apiUrl = 'https://api-ssl.bitly.com/v4/shorten';
 
     const formattedUrl = /^(https?|ftp):\/\//i.test(url) ? url : `http://${url}`;

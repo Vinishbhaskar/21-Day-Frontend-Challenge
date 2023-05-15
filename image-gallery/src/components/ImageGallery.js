@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ImageModal from './ImageModal';
 import ImageCard from './ImageCard';
+import Shimmer from './Shimmer'
 
 const ImageGallery = () => {
   const [images, setImages] = useState([]);
@@ -96,7 +97,7 @@ const ImageGallery = () => {
       {selectedImage && (
         <ImageModal image={selectedImage} onClose={handleImageModalClose} />
       )}
-      {loading && <p>Loading...</p>}
+      {loading && <Shimmer/>}
     </div>
     </div>
   );

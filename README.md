@@ -16,14 +16,19 @@ The projects are categorized into three sets of seven days:
 
 ## Compeleted :
   
-  Basic Projects (Days 1-7): These projects helped me strengthen my foundational skills in React Js.
+  **Basic Projects (Days 1-7):** These projects will help me strengthen my foundational skills in React.
   
 - Day 1 :  [Todo List App](https://todo-application-21day-react.netlify.app/)
 - Day 2 :  [Random Quote Generator](https://random-quote-generator-21day.netlify.app/)
-- Day 3 :  [Currency Converter](currency-converter-21day.netlify.app)
+- Day 3 :  [Currency Converter](https://currency-converter-21day.netlify.app)
 - Day 4 :  [QR Code Generator](https://qr-code-generator-21day.netlify.app/)
 - Day 5 :  [Notes Keeping App](https://notes-keeper-21day.netlify.app/)
-- Day 6 : .....
+- Day 6 :  [URL SHortener](https://url-shortener-21day.netlify.app/)
+- Day 7 :  [Image Gallery](http://image-gallery-21day.netlify.app/)
+ 
+ **Intermediate Projects (Days 8-14):** These projects will push me to apply advanced concepts and build more complex applications.
+ 
+ - Day 8 : .....
 
 ## Project List 📝
 

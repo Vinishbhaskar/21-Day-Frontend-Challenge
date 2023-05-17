@@ -4,7 +4,10 @@ This is a simple weather app that displays the current weather conditions for a 
 
 # Demo
 
-You can try out the Simple Weather App live here.
+You can try out the Simple Weather App [live here](https://weather-app-21day.netlify.app/).
+
+![image](https://github.com/Vinishbhaskar/21-Day-Frontend-Challenge/assets/25699351/abb91a1c-9eed-47ed-acc1-fb543439b96f)
+
 
 ## Features
 
@@ -79,6 +82,8 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ## Conclusion
 
 Completing Day 8 of the 21-day frontend development challenge was an exciting experience.
+
+The Weather App provides real-time weather information for any location worldwide. Simply enter your desired location, and get instant access to the latest weather updates.
 
 Stay tuned for the upcoming projects in this challenge. I'll be sharing my progress, insights, and code breakdowns on LinkedIn. Make sure to follow me and join me on this exciting journey of frontend development.
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WeatherToday = ({ weatherData }) => {
+function WeatherToday({ weatherData }){
   if (!weatherData || !weatherData.main || !weatherData.weather || weatherData.weather.length === 0) {
     return null; // Render nothing if data is not available yet
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WeatherHighlights = ({ weatherData }) => {
+function WeatherHighlights({ weatherData }){
   if (!weatherData || !weatherData.main || !weatherData.visibility) {
     return null; // Render nothing if data is not available yet
   }

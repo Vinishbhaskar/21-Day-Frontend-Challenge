@@ -3,7 +3,7 @@ import axios from 'axios';
 import WeatherToday from './WeatherToday';
 import WeatherHighlights from './WeatherHighlights';
 
-const WeatherApp = () => {
+function WeatherApp(){
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
 
@@ -25,7 +25,7 @@ const WeatherApp = () => {
   const handleSearch = async () => {
     try {
       // Fetch weather data for the entered location
-      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=a5bb4718b30b6f58f58697997567fffa`);
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_API_KEY}`);
       const data = response.data;
       setWeatherData(data);
     } catch (error) {

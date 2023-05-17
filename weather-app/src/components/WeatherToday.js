@@ -18,30 +18,23 @@ const WeatherToday = ({ weatherData }) => {
   const location = weatherData.name;
   const country = weatherData.sys.country;
 
-  // Add appropriate image/icon element for weather condition
-  // You can import the image from your assets folder or use a CDN link
-  // const weatherIcon = <img src={require('../assets/weather-icon.png')} alt="Weather Icon" />;
-  // Replace 'weather-icon.png' with the actual filename or CDN link for the weather icon
-
   return (
-    <div className="flex">
-      <div className="w-1/4 bg-gray-200 p-4">
-        <div>
-          {/* Add weather icon element */}
-          {/* {weatherIcon} */}
-          <h2 className="text-4xl font-bold">{temperature}°C</h2>
-          <p className="text-lg">Feels Like: {feelsLike}°C</p>
-          <p className="text-lg">Description: {description}</p>
-        </div>
+    <div className="flex items-center bg-white rounded-lg shadow-md p-8">
+      <img
+        src={require('../assets/01d.png')} // Replace with actual weather icon URL or import from assets folder
+        alt="Weather Icon"
+        className="w-16 h-16 mr-8"
+      />
+      <div>
+        <h2 className="text-4xl font-bold mb-2">{temperature}°C</h2>
+        <p className="text-lg">Feels Like: {feelsLike}°C</p>
+        <p className="text-lg">Description: {description}</p>
         <hr className="border-gray-300 my-4" />
         <div className="text-lg">
           <p>Date: {date}</p>
           <p>Time: {time}</p>
           <p>Location: {location}, {country}</p>
         </div>
-      </div>
-      <div className="w-3/4 p-4">
-        {/* Other content or components */}
       </div>
     </div>
   );

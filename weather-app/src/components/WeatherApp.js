@@ -35,23 +35,33 @@ const WeatherApp = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Weather App</h1>
-      <div className="flex items-center mb-4">
-        <input
-          type="text"
-          value={location}
-          onChange={event => setLocation(event.target.value)}
-          className="p-2 border border-gray-400 rounded mr-2"
-        />
-        <button onClick={handleSearch} className="p-2 bg-blue-500 text-white rounded">Search</button>
-      </div>
-
-      {weatherData && (
-        <div>
-          <WeatherToday weatherData={weatherData} />
-          <WeatherHighlights weatherData={weatherData} />
+      <h1 className="flex justify-center text-4xl font-bold mb-8">Weather App</h1>
+      <div className="flex flex-col items-center">
+        <div className="mb-8">
+          <input
+            type="text"
+            value={location}
+            onChange={event => setLocation(event.target.value)}
+            className="p-4 border border-gray-400 rounded-l-lg focus:outline-none focus:border-blue-500"
+            placeholder="Enter location"
+          />
+          <button onClick={handleSearch} className="bg-blue-500 text-white rounded-r-lg px-8 py-4 hover:bg-blue-600 transition duration-300 ease-in-out">
+            Search
+          </button>
         </div>
-      )}
+        {weatherData && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-xl font-semibold mb-4">Today's Weather</h2>
+              <WeatherToday weatherData={weatherData} />
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-xl font-semibold mb-4">Today's Highlights</h2>
+              <WeatherHighlights weatherData={weatherData} />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

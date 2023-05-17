@@ -34,8 +34,8 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="flex justify-center text-4xl font-bold mb-8">Weather App</h1>
+    <div className="container mx-auto p-4 bg-slate-100">
+      <h1 className="flex justify-center text-4xl font-bold mb-8 mt-8">Weather App</h1>
       <div className="flex flex-col items-center">
         <div className="mb-8">
           <input
@@ -51,12 +51,12 @@ const WeatherApp = () => {
         </div>
         {weatherData && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-xl font-semibold mb-4">Today's Weather</h2>
+            <div className="bg-gray-300 rounded-lg shadow-md p-8">
+              <h2 className="text-xl font-semibold mb-4 text-indigo-800">Today's Weather</h2>
               <WeatherToday weatherData={weatherData} />
             </div>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-xl font-semibold mb-4">Today's Highlights</h2>
+            <div className="bg-gray-300 rounded-lg shadow-md p-8">
+              <h2 className="text-xl font-semibold mb-4 text-indigo-800">Today's Highlights</h2>
               <WeatherHighlights weatherData={weatherData} />
             </div>
           </div>

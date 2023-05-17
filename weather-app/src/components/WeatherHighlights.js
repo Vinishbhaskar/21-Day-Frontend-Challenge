@@ -15,7 +15,7 @@ const WeatherHighlights = ({ weatherData }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-md p-8">
-      <h2 className="text-xl font-semibold mb-4">Today's Highlights</h2>
+      {/* <h2 className="text-xl font-semibold mb-4">Today's Highlights</h2> */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <h3 className="text-lg font-semibold mb-2">Sunrise</h3>
@@ -41,10 +41,6 @@ const WeatherHighlights = ({ weatherData }) => {
           <h3 className="text-lg font-semibold mb-2">Cloudiness</h3>
           <p className="text-lg">{cloudiness}%</p>
         </div>
-        {/* <div>
-          <h3 className="text-lg font-semibold mb-2">pressure</h3>
-          <p className="text-lg">{pressure}hpa</p>
-        </div> */}
       </div>
     </div>
   );

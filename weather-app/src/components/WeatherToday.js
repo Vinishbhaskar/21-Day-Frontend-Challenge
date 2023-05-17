@@ -18,19 +18,31 @@ const WeatherToday = ({ weatherData }) => {
   const location = weatherData.name;
   const country = weatherData.sys.country;
 
-  return (
-    <div className="flex items-center bg-white rounded-lg shadow-md p-8">
-      <img
-        src={require('../assets/01d.png')} // Replace with actual weather icon URL or import from assets folder
+  const iconCode = weatherData.weather[0].icon
+
+  // Set the weather icon dynamically
+  const weatherIcon = iconCode ? (
+    <img
+        src={require(`../assets/${iconCode}.png`)} // Replace with actual weather icon URL or import from assets folder
         alt="Weather Icon"
         className="w-16 h-16 mr-8"
       />
+  ) : null;
+
+  return (
+    <div className="flex items-center bg-white rounded-lg shadow-md p-8">
+      {/* {<img
+        src={require(`../assets/${iconCode}.png`)} // Replace with actual weather icon URL or import from assets folder
+        alt="Weather Icon"
+        className="w-16 h-16 mr-8"
+      />} */}
+      {weatherIcon}
       <div>
         <h2 className="text-4xl font-bold mb-2">{temperature}°C</h2>
         <p className="text-lg">Feels Like: {feelsLike}°C</p>
         <p className="text-lg">Description: {description}</p>
         <hr className="border-gray-300 my-4" />
-        <div className="text-lg">
+        <div className="text-lg space-y-4">
           <p>Date: {date}</p>
           <p>Time: {time}</p>
           <p>Location: {location}, {country}</p>

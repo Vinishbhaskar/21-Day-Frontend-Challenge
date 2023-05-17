@@ -3,7 +3,7 @@ import WeatherApp from './components/WeatherApp';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="bg-slate-100 min-h-screen">
       <WeatherApp />
     </div>
   );

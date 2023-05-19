@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* main */
+/* 
+{
+  @apply box-border [font-family:"Inter",sans-serif] m-0 p-0;
+} */
+
+:root {
+  @apply [--first-color:#6a5ae2] [--opacity-first:#796ae3] [--second-color:#ff8fa3] [--opacity-second:#fea5b5] [--text-color:#ffffff] [--dark-color:#0c0a2b] [--light-color:#d2cef6] [--bg-color:#e8e5fb] [--body-bg:#ffffff] [--value:attr(data-value)];
+}
+.app-container {
+  @apply w-full h-screen bg-[color:var(--body-bg)] px-4 py-8;
+}
+.error-link {
+  @apply w-[300px] flex gap-2 justify-center items-center text-[color:var(--text-color)] no-underline bg-[color:var(--second-color)] mt-8 mb-0 mx-auto px-6 py-4 rounded-lg;
+}
+@media screen and (max-width: 768px) {
+  .app-container {
+    @apply p-0;
+  }
+}
+
+/* home */
+.intro-box {
+  @apply relative grid grid-cols-[calc(100%_-_70px)_70px] gap-2 items-center bg-[color:var(--first-color)] overflow-hidden px-8 py-6 rounded-2xl before:content-[""] before:absolute before:bottom-[-25px] before:w-[55px] before:h-[55px] before:border-[color:var(--opacity-first)] before:z-0 before:rounded-[50%] before:border-[7px] before:border-solid before:left-[40%] after:content-[""] after:absolute after:left-[-25px] after:top-[-25px] after:w-[100px] after:h-[100px] after:bg-[color:var(--opacity-first)] after:z-0 after:rounded-[50%];
+}
+.intro-texts {
+  @apply z-[9];
+}
+.intro-title {
+  @apply text-xs uppercase tracking-[2px] text-[color:var(--light-color)] font-normal mb-2;
+}
+.intro-description {
+  @apply text-base text-[color:var(--text-color)];
+}
+.intro-icon {
+  @apply w-[50px] h-[50px] grid place-items-center bg-[color:var(--opacity-first)] z-[9] rounded-lg;
+}
+.intro-icon i {
+  @apply text-xl text-[color:var(--text-color)];
+}
+.level-boxes {
+  @apply grid grid-cols-[repeat(2,1fr)] gap-3 mt-4;
+}
+.level-box {
+  @apply w-full bg-[color:var(--second-color)] flex flex-col gap-2 p-4 rounded-2xl;
+}
+.level-text {
+  @apply flex flex-col gap-1 justify-center items-center;
+}
+.level-name {
+  @apply text-[2rem] text-[color:var(--text-color)] font-semibold;
+}
+.level-text span {
+  @apply text-xs uppercase tracking-[2px] text-[color:var(--text-color)];
+}
+.level-link {
+  @apply inline-block flex justify-center gap-2 items-center w-full text-center text-[0.9rem] bg-[color:var(--opacity-second)] no-underline text-[color:var(--text-color)] p-3 rounded-lg;
+}
+
+/* Quiz */
+
+  .quiz-box {
+    @apply max-w-full w-[560px] bg-[color:var(--bg-color)] h-[calc(100vh_-_4rem)] overflow-scroll m-auto p-6 rounded-2xl;
+  }
+  .progress-box {
+    @apply flex flex-col gap-4 bg-[color:var(--first-color)] pt-6 pb-0 px-8 rounded-2xl;
+  }
+  .progress-top {
+    @apply grid grid-cols-[calc(100%_-_70px)_70px] gap-2 items-center;
+  }
+  .progress-title {
+    @apply text-xs uppercase tracking-[2px] text-[color:var(--light-color)] font-normal mb-2;
+  }
+  .progress-description {
+    @apply text-base text-[color:var(--text-color)];
+  }
+  .progress-icon {
+    @apply w-[50px] h-[50px] grid place-items-center bg-[color:var(--opacity-first)] rounded-lg;
+  }
+  .progress-icon i {
+    @apply text-xl text-[color:var(--text-color)];
+  }
+  .progress-bottom {
+    @apply relative w-full grid grid-cols-[125px_calc(100%_-_125px)] items-center gap-2 bg-[color:var(--second-color)] overflow-hidden p-6 rounded-t-lg before:content-[""] before:absolute before:bottom-[-25px] before:w-[55px] before:h-[55px] before:border-[color:var(--opacity-second)] before:z-0 before:rounded-[50%] before:border-[7px] before:border-solid before:left-[40%] after:content-[""] after:absolute after:top-[-25px] after:w-[100px] after:h-[100px] after:bg-[color:var(--opacity-second)] after:z-0 after:rounded-[50%] after:left-[85%];
+  }
+  .progress-circle {
+    @apply [--percentage:var(--value)] w-[100px] h-[100px] flex justify-center items-center [background:radial-gradient(_closest-side,var(--second-color)_80%,transparent_0_99.9%,white_0_),conic-gradient(_var(--body-bg)_calc(var(--percentage)_*_1%),var(--opacity-second)_0_)] z-[1] rounded-[50%];
+  }
+  .progress-big {
+    @apply text-[1.75rem] font-medium text-[color:var(--text-color)];
+  }
+  .progress-mini {
+    @apply text-xs font-normal text-[color:var(--text-color)] mt-3;
+  }
+  .progress-detail {
+    @apply text-base font-medium text-[color:var(--text-color)] z-[1];
+  }
+  .progress-circle.time {
+    @apply [--percentage:var(--value)] w-[70px] h-[70px] [background:radial-gradient(_closest-side,var(--bg-color)_85%,transparent_0_99.9%,white_0_),conic-gradient(_var(--first-color)_calc(var(--percentage)_*_1%),var(--body-bg)_0_)];
+  }
+  .question-box {
+    @apply relative w-full grid grid-cols-[calc(100%_-_70px)_70px] items-center gap-2 mt-6 mb-0 mx-0;
+  }
+  .question-title {
+    @apply text-[0.8rem] font-bold uppercase tracking-[2px] text-[color:var(--first-color)] mb-2;
+  }
+  .question {
+    @apply text-base font-semibold text-[color:var(--dark-color)];
+  }
+  .time {
+    @apply text-xl font-extrabold;
+  }
+  .answers-boxes {
+    @apply w-full grid grid-cols-[repeat(2,1fr)] gap-4 mt-8;
+  }
+  .answer-label {
+    @apply w-full bg-[color:var(--body-bg)] cursor-pointer flex items-center justify-between text-[0.9rem] text-[color:var(--dark-color)] capitalize transition-all duration-[0.25s] px-5 py-3 rounded-lg border-2 border-solid border-transparent active:scale-90;
+  }
+  .answer-label.selected {
+    @apply bg-[color:var(--first-color)] text-[color:var(--text-color)];
+  }
+  .answer-label input {
+    @apply [outline:none] accent-[color:var(--text-color)] border-[none];
+  }
+  .message {
+    @apply w-[300px] flex gap-6 flex-nowrap items-center bg-[#feb37f] mt-8 mb-0 mx-auto px-6 py-4 rounded-lg;
+  }
+  .message.animation {
+    @apply animate-[message_1.5s_ease-in-out_infinite];
+  }
+  .message .icon {
+    @apply w-10 h-10 rounded grid place-items-center bg-[#ff9b55];
+  }
+  .message .icon i {
+    @apply text-xl text-[color:var(--text-color)];
+  }
+  .message span {
+    @apply text-[0.9rem] text-[color:var(--text-color)];
+  }
+  .next {
+    @apply relative w-full flex [justify-content:end] mt-6 mb-0 mx-0;
+  }
+  .next-btn {
+    @apply flex justify-between gap-3 items-center text-[color:var(--text-color)] bg-[color:var(--first-color)] [outline:none] cursor-pointer transition-all duration-[0.25s] px-5 py-3 rounded-lg border-[none] active:scale-90;
+  }
+  .next-btn .icon {
+    @apply w-[30px] h-[30px] grid place-items-center bg-[color:var(--opacity-first)] text-[color:var(--text-color)] rounded-lg;
+  }
+  .result-btn {
+    @apply bg-[color:var(--second-color)];
+  }
+  .result-btn .icon {
+    @apply bg-[color:var(--opacity-second)];
+  }
+  @media screen and (max-width: 768px) {
+    .quiz-box {
+      @apply min-h-screen p-4;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .quiz-box {
+      @apply min-h-screen p-4;
+    }
+    .progress-bottom {
+      @apply grid-cols-[repeat(1,1fr)] place-items-center gap-4 text-center after:left-3/4;
+    }
+    .answers-boxes {
+      @apply grid-cols-[repeat(1,1fr)];
+    }
+  }
+    @keyframes message {
+      0% {
+        transform: scale(0.9);
+      }
+      50% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.9);
+      }
+    }
+
+
+
+  /* Result */
+
+  @import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+.result-box {
+  @apply w-full bg-[color:var(--second-color)] mb-4 p-6 rounded-2xl;
+}
+.result-bg {
+  @apply relative w-full overflow-hidden h-[120px] grid place-items-center;
+}
+.result-bg img {
+  @apply absolute w-full h-full object-cover z-0 opacity-60 left-0 top-0;
+}
+.percentile {
+  @apply relative text-[5.5rem] z-[9] [font-family:"Nabla",cursive] -top-2.5;
+}
+.result-detail {
+  @apply text-center text-[0.9rem] text-[color:var(--text-color)] font-medium mx-0 my-4;
+}
+.new-quiz {
+  @apply inline-block no-underline w-full text-center text-[color:var(--text-color)] bg-[color:var(--opacity-second)] text-[0.9rem] cursor-pointer [outline:none] px-6 py-5 rounded-xl border-[none];
+}
+.check-answers-title {
+  @apply text-[color:var(--dark-color)] text-xl font-bold mb-4;
+}
+.check-answers-boxes {
+  @apply flex flex-col gap-3;
+}
+.check-answer-box {
+  @apply bg-[color:var(--body-bg)] p-5 rounded-2xl;
+}
+.check-answer-box.correct {
+  @apply border-l-[7px] border-l-[#3ac7a5] border-solid;
+}
+.check-answer-box.wrong {
+  @apply border-l-[7px] border-l-[#ff4747] border-solid;
+}
+.check-answer-top {
+  @apply grid items-center grid-cols-[calc(100%_-_60px)_60px];
+}
+.check-answer-count {
+  @apply text-[color:var(--first-color)] font-semibold uppercase tracking-[2px] text-[0.7rem] mb-2;
+}
+.check-answer-question {
+  @apply text-[color:var(--dark-color)] text-[0.9rem] font-medium;
+}
+.check-icon {
+  @apply w-[50px] h-[50px] grid place-items-center rounded-lg;
+}
+.check-answer-box.correct .check-icon {
+  @apply bg-[rgba(133,232,209,0.239)];
+}
+.check-answer-box.wrong .check-icon {
+  @apply bg-red-50;
+}
+.check-icon i {
+  @apply text-[1.75rem] opacity-100;
+}
+.check-answer-box.correct .check-icon i {
+  @apply text-[#3ac7a5];
+}
+.check-answer-box.wrong .check-icon i {
+  @apply text-[#ff4747];
+}
+.check-answer-bottom {
+  @apply grid grid-cols-[repeat(2,1fr)] gap-2 items-center;
+}
+.answer-box {
+  @apply w-full bg-[#f3f4f7] flex flex-col gap-1 mt-4 px-5 py-3 rounded-lg;
+}
+.check-answer-box.correct .answer-box:nth-child(1) {
+  @apply bg-[rgba(133,232,209,0.239)];
+}
+.check-answer-box.wrong .answer-box:nth-child(1) {
+  @apply bg-red-50;
+}
+.answer-title {
+  @apply text-[0.7rem] text-[#949fae];
+}
+.check-answer-box.correct .answer-box:nth-child(1) .answer-title {
+  @apply text-[#3ac7a5];
+}
+.check-answer-box.wrong .answer-box:nth-child(1) .answer-title {
+  @apply text-[#ff4747];
+}
+.answer-text {
+  @apply text-[0.9rem] text-[color:var(--dark-color)];
+}

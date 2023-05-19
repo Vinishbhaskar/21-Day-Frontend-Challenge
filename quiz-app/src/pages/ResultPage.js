@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-// import Image from "";
-import {FaCheck, FaTimes} from "react-icons/fa"
-
+import {useLocation } from "react-router-dom";
+import ResultBox from "../components/ResultBox";
+import CheckAnswerBox from "../components/CheckAnswerBox";
 
 function Result() {
   const location = useLocation();
@@ -19,62 +18,18 @@ function Result() {
 
   return (
     <div className="result">
-      <div className="result-box">
-        <div className="result-bg">
-          <span className="percentile">
-            {Math.round((percentile / allQuestions.length) * 100)}%
-          </span>
-          {/* <img src={Image} alt="result" /> */}
-        </div>
-        <p className="result-detail">
-          You answered {percentile} out of {allQuestions.length} questions
-          correctly!
-        </p>
-        <Link to="/" className="new-quiz">
-          Start a new quiz!
-        </Link>
-      </div>
+      <ResultBox percentile={percentile} totalQuestions={allQuestions.length} />
       <h2 className="check-answers-title">Check Correct Answers</h2>
       <div className="check-answers-boxes">
-        {allQuestions.map((item, key) => {
-          console.log();
-          return (
-            <div
-              key={key}
-              className={
-                allAnswers[key].trueAnswer
-                  ? "check-answer-box correct"
-                  : "check-answer-box wrong"
-              }
-            >
-              <div className="check-answer-top">
-                <div className="check-texts">
-                  <p className="check-answer-count">Question: {key + 1}</p>
-                  <h3 className="check-answer-question">{item.question}</h3>
-                </div>
-                <div className="check-icon">
-                  {
-                      allAnswers[key].trueAnswer ? <FaCheck/> : <FaTimes/>
-                    }
-                </div>
-              </div>
-              <div className="check-answer-bottom">
-                <div className="answer-box">
-                  <span className="answer-title">Your Answer</span>
-                  <span className="answer-text">{allAnswers[key].answer}</span>
-                </div>
-                <div className="answer-box">
-                  <span className="answer-title">Correct Answer</span>
-                  <span className="answer-text">
-                    {item.answers.map((ans) => {
-                      return ans.trueAnswer ? ans.answer : null;
-                    })}
-                  </span>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {allAnswers.map((answer, index) => (
+          <CheckAnswerBox
+            key={index}
+            question={index + 1}
+            answer={answer.answer}
+            trueAnswer={answer.trueAnswer}
+            questionData={allQuestions[index]}
+          />
+        ))}
       </div>
     </div>
   );

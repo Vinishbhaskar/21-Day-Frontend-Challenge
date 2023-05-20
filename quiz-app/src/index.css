@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 /* main */
-/* 
-{
-  @apply box-border [font-family:"Inter",sans-serif] m-0 p-0;
-} */
 
 :root {
   @apply [--first-color:#6a5ae2] [--opacity-first:#796ae3] [--second-color:#ff8fa3] [--opacity-second:#fea5b5] [--text-color:#ffffff] [--dark-color:#0c0a2b] [--light-color:#d2cef6] [--bg-color:#e8e5fb] [--body-bg:#ffffff] [--value:attr(data-value)];

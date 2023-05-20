@@ -2,7 +2,12 @@
 
 This is a Quiz app built with React. It allows users to take quizzes on different topics and provides results based on their answers.
 
+## Live Demo :
+
+- https://quiz-app-21day.netlify.app/
+
 ## Features :rocket:
+
 
 - Multiple quiz topics to choose from (HTML, CSS, JavaScript, ReactJs, NodeJs, Frontend).
 - Timed quizzes with a countdown timer ⏲️.
@@ -10,6 +15,8 @@ This is a Quiz app built with React. It allows users to take quizzes on differen
 - Immediate feedback on correct and incorrect answers ✅❌.
 - Results page displaying the number of correct answers and a list of all questions with their correct answers.
 - Error page for handling invalid routes ⚠️.
+
+![image](https://github.com/Vinishbhaskar/21-Day-Frontend-Challenge/assets/25699351/b01341b6-ed45-4145-8a6d-34bae55a7a39)
 
 ## Table of Contents 📑
 

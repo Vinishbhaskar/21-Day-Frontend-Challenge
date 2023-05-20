@@ -6,1218 +6,616 @@ function Provider({ children }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const questions = {
-    A1: [
+    ReactJs: [
       {
-        id: 1,
-        question: "What does 'happy' mean?",
-        answers: [
-          { answer: "Üzgün", trueAnswer: false },
-          { answer: "Sinirli", trueAnswer: false },
-          { answer: "Mutlu", trueAnswer: true },
-          { answer: "Sıkıcı", trueAnswer: false },
-        ],
+        "id": 1,
+        "question": "What is JSX?",
+        "answers": [
+          { "answer": "JavaScript XML", "trueAnswer": true },
+          { "answer": "Java Syntax Extension", "trueAnswer": false },
+          { "answer": "JavaScript Extension", "trueAnswer": false },
+          { "answer": "JavaScript Markup Language", "trueAnswer": false }
+        ]
       },
       {
-        id: 2,
-        question: "What does 'book' mean?",
-        answers: [
-          { answer: "Telefon", trueAnswer: false },
-          { answer: "Anahtar", trueAnswer: false },
-          { answer: "Kitap", trueAnswer: true },
-          { answer: "Kalem", trueAnswer: false },
-        ],
+        "id": 2,
+        "question": "What is a state in React?",
+        "answers": [
+          { "answer": "An object that holds component data", "trueAnswer": true },
+          { "answer": "A function that returns JSX", "trueAnswer": false },
+          { "answer": "A reusable component", "trueAnswer": false },
+          { "answer": "A styling library in React", "trueAnswer": false }
+        ]
       },
       {
-        id: 3,
-        question: "What does 'hot' mean?",
-        answers: [
-          { answer: "Soğuk", trueAnswer: false },
-          { answer: "Sıcak", trueAnswer: true },
-          { answer: "Nemli", trueAnswer: false },
-          { answer: "Kuru", trueAnswer: false },
-        ],
+        "id": 3,
+        "question": "What is a prop in React?",
+        "answers": [
+          { "answer": "Data passed from a parent component to a child component", "trueAnswer": true },
+          { "answer": "A method used to update component state", "trueAnswer": false },
+          { "answer": "A callback function in React", "trueAnswer": false },
+          { "answer": "A CSS-in-JS solution in React", "trueAnswer": false }
+        ]
       },
       {
-        id: 4,
-        question: "What does 'red' mean?",
-        answers: [
-          { answer: "Kırmızı", trueAnswer: true },
-          { answer: "Yeşil", trueAnswer: false },
-          { answer: "Mavi", trueAnswer: false },
-          { answer: "Sarı", trueAnswer: false },
-        ],
+        "id": 4,
+        "question": "What is the purpose of componentDidMount() in React?",
+        "answers": [
+          { "answer": "To perform actions after the component has been rendered", "trueAnswer": true },
+          { "answer": "To handle component errors", "trueAnswer": false },
+          { "answer": "To handle form submissions in React", "trueAnswer": false },
+          { "answer": "To define the initial state of a component", "trueAnswer": false }
+        ]
       },
       {
-        id: 5,
-        question: "What does 'cold' mean?",
-        answers: [
-          { answer: "Sıcak", trueAnswer: false },
-          { answer: "Nemli", trueAnswer: false },
-          { answer: "Kuru", trueAnswer: false },
-          { answer: "Soğuk", trueAnswer: true },
-        ],
+        "id": 5,
+        "question": "What is the virtual DOM in React?",
+        "answers": [
+          { "answer": "A lightweight representation of the actual DOM", "trueAnswer": true },
+          { "answer": "A component in React that does not render anything", "trueAnswer": false },
+          { "answer": "A React feature used for routing", "trueAnswer": false },
+          { "answer": "A React hook for managing side effects", "trueAnswer": false }
+        ]
       },
       {
-        id: 6,
-        question: "What does 'small' mean?",
-        answers: [
-          { answer: "Büyük", trueAnswer: false },
-          { answer: "Küçük", trueAnswer: true },
-          { answer: "Yüksek", trueAnswer: false },
-          { answer: "Ağır", trueAnswer: false },
-        ],
+        "id": 6,
+        "question": "What is the purpose of the render() method in React?",
+        "answers": [
+          { "answer": "To return the JSX to be rendered", "trueAnswer": true },
+          { "answer": "To define component lifecycle methods", "trueAnswer": false },
+          { "answer": "To handle user interactions in React", "trueAnswer": false },
+          { "answer": "To handle asynchronous operations in React", "trueAnswer": false }
+        ]
       },
       {
-        id: 7,
-        question: "What does 'fast' mean?",
-        answers: [
-          { answer: "Yavaş", trueAnswer: false },
-          { answer: "Hızlı", trueAnswer: true },
-          { answer: "Uzun", trueAnswer: false },
-          { answer: "Kısa", trueAnswer: false },
-        ],
+        "id": 7,
+        "question": "What is the role of keys in React lists?",
+        "answers": [
+          { "answer": "To provide a unique identifier to list items", "trueAnswer": true },
+          { "answer": "To handle events in React", "trueAnswer": false },
+          { "answer": "To define CSS classes for list items", "trueAnswer": false },
+          { "answer": "To control the visibility of list items", "trueAnswer": false }
+        ]
       },
       {
-        id: 8,
-        question: "What does 'big' mean?",
-        answers: [
-          { answer: "Küçük", trueAnswer: false },
-          { answer: "Düşük", trueAnswer: false },
-          { answer: "Büyük", trueAnswer: true },
-          { answer: "Yüksek", trueAnswer: false },
-        ],
+        "id": 8,
+        "question": "What is the purpose of useState() hook in React?",
+        "answers": [
+          { "answer": "To add stateful logic to functional components", "trueAnswer": true },
+          { "answer": "To define props for a component", "trueAnswer": false },
+          { "answer": "To create reusable custom hooks", "trueAnswer": false },
+          { "answer": "To handle component lifecycle methods", "trueAnswer": false }
+        ]
       },
       {
-        id: 9,
-        question: "What does 'long' mean?",
-        answers: [
-          { answer: "Kısa", trueAnswer: false },
-          { answer: "Hızlı", trueAnswer: false },
-          { answer: "Yavaş", trueAnswer: false },
-          { answer: "Uzun", trueAnswer: true },
-        ],
+        "id": 9,
+        "question": "What is the significance of the shouldComponentUpdate() method in React?",
+        "answers": [
+          { "answer": "To optimize performance by controlling component re-rendering", "trueAnswer": true },
+          { "answer": "To handle errors in React components", "trueAnswer": false },
+          { "answer": "To define the initial state of a component", "trueAnswer": false },
+          { "answer": "To handle user interactions in React", "trueAnswer": false }
+        ]
       },
       {
-        id: 10,
-        question: "What does 'old' mean?",
-        answers: [
-          { answer: "Genç", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-          { answer: "Yaşlı", trueAnswer: true },
-          { answer: "Çirkin", trueAnswer: false },
-        ],
-      },
-      {
-        id: 11,
-        question: "What does 'new' mean?",
-        answers: [
-          { answer: "Yeni", trueAnswer: true },
-          { answer: "Eski", trueAnswer: false },
-          { answer: "Kirli", trueAnswer: false },
-          { answer: "Temiz", trueAnswer: false },
-        ],
-      },
-      {
-        id: 12,
-        question: "What does 'fast food' mean?",
-        answers: [
-          { answer: "Sağlıklı yemek", trueAnswer: false },
-          { answer: "Lezzetli yemek", trueAnswer: false },
-          { answer: "Pahalı yemek", trueAnswer: false },
-          { answer: "Hızlı yemek", trueAnswer: true },
-        ],
-      },
-      {
-        id: 13,
-        question: "What does 'quiet' mean?",
-        answers: [
-          { answer: "Gürültülü", trueAnswer: false },
-          { answer: "Sessiz", trueAnswer: true },
-          { answer: "Canlı", trueAnswer: false },
-          { answer: "Sakin", trueAnswer: false },
-        ],
-      },
-      {
-        id: 14,
-        question: "What does 'fat' mean?",
-        answers: [
-          { answer: "Zayıf", trueAnswer: false },
-          { answer: "Şişman", trueAnswer: true },
-          { answer: "Uzun", trueAnswer: false },
-          { answer: "Kısa", trueAnswer: false },
-        ],
-      },
-      {
-        id: 15,
-        question: "What does 'expensive' mean?",
-        answers: [
-          { answer: "Ucuz", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-          { answer: "Pahalı", trueAnswer: true },
-          { answer: "Kötü", trueAnswer: false },
-        ],
-      },
-      {
-        id: 16,
-        question: "What does 'cheap' mean?",
-        answers: [
-          { answer: "Ucuz", trueAnswer: true },
-          { answer: "Pahalı", trueAnswer: false },
-          { answer: "Kötü", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-        ],
-      },
-      {
-        id: 17,
-        question: "What does 'worried' mean?",
-        answers: [
-          { answer: "Üzgün", trueAnswer: false },
-          { answer: "Mutlu", trueAnswer: false },
-          { answer: "Sıkıntılı", trueAnswer: false },
-          { answer: "Endişeli", trueAnswer: true },
-        ],
-      },
-      {
-        id: 18,
-        question: "What does 'sad' mean?",
-        answers: [
-          { answer: "Mutlu", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-          { answer: "Kötü", trueAnswer: false },
-          { answer: "Üzgün", trueAnswer: true },
-        ],
-      },
-      {
-        id: 19,
-        question: "What does 'watch' mean?",
-        answers: [
-          { answer: "Bakmak", trueAnswer: false },
-          { answer: "Korkmak", trueAnswer: false },
-          { answer: "İzlemek", trueAnswer: true },
-          { answer: "Uyumak", trueAnswer: false },
-        ],
-      },
-      {
-        id: 20,
-        question: "What does 'sleep' mean?",
-        answers: [
-          { answer: "Kaçmak", trueAnswer: false },
-          { answer: "Uyumak", trueAnswer: true },
-          { answer: "Koşmak", trueAnswer: false },
-          { answer: "Oturmak", trueAnswer: false },
-        ],
-      },
+        "id": 10,
+        "question": "What is a React fragment?",
+        "answers": [
+          { "answer": "A lightweight syntax for rendering multiple elements without a wrapper", "trueAnswer": true },
+          { "answer": "A component used for form validation in React", "trueAnswer": false },
+          { "answer": "A built-in React hook for managing side effects", "trueAnswer": false },
+          { "answer": "A CSS-in-JS solution in React", "trueAnswer": false }
+        ]
+      }
     ],
-    A2: [
+    HTML: [
       {
-        id: 1,
-        question: "What does 'ability' mean?",
-        answers: [
-          { answer: "Kabiliyet", trueAnswer: true },
-          { answer: "Kısa", trueAnswer: false },
-          { answer: "Yorgun", trueAnswer: false },
-          { answer: "Zeki", trueAnswer: false },
-        ],
+        "id": 1,
+        "question": "What does HTML stand for?",
+        "answers": [
+          { "answer": "HyperText Markup Language", "trueAnswer": true },
+          { "answer": "Home Tool Markup Language", "trueAnswer": false },
+          { "answer": "Hyper Tool Markup Language", "trueAnswer": false },
+          { "answer": "Hyperlink Text Markup Language", "trueAnswer": false }
+        ]
       },
       {
-        id: 2,
-        question: "What does 'accept' mean?",
-        answers: [
-          { answer: "Reddetmek", trueAnswer: false },
-          { answer: "Birleştirmek", trueAnswer: false },
-          { answer: "Kabul etmek", trueAnswer: true },
-          { answer: "Ayrılmak", trueAnswer: false },
-        ],
+        "id": 2,
+        "question": "Which tag is used to define a hyperlink in HTML?",
+        "answers": [
+          { "answer": "<a>", "trueAnswer": true },
+          { "answer": "<p>", "trueAnswer": false },
+          { "answer": "<h1>", "trueAnswer": false },
+          { "answer": "<div>", "trueAnswer": false }
+        ]
       },
       {
-        id: 3,
-        question: "What does 'achieve' mean?",
-        answers: [
-          { answer: "Kaybetmek", trueAnswer: false },
-          { answer: "Başarmak", trueAnswer: true },
-          { answer: "Savaşmak", trueAnswer: false },
-          { answer: "Dinlenmek", trueAnswer: false },
-        ],
+        "id": 3,
+        "question": "What is the correct HTML element for the largest heading?",
+        "answers": [
+          { "answer": "<h1>", "trueAnswer": true },
+          { "answer": "<h2>", "trueAnswer": false },
+          { "answer": "<h3>", "trueAnswer": false },
+          { "answer": "<h4>", "trueAnswer": false }
+        ]
       },
       {
-        id: 4,
-        question: "What does 'add' mean?",
-        answers: [
-          { answer: "Eklemek", trueAnswer: true },
-          { answer: "Çıkarmak", trueAnswer: false },
-          { answer: "Karıştırmak", trueAnswer: false },
-          { answer: "Kırmak", trueAnswer: false },
-        ],
+        "id": 4,
+        "question": "Which attribute is used to specify an alternate text for an image in HTML?",
+        "answers": [
+          { "answer": "alt", "trueAnswer": true },
+          { "answer": "src", "trueAnswer": false },
+          { "answer": "href", "trueAnswer": false },
+          { "answer": "title", "trueAnswer": false }
+        ]
       },
       {
-        id: 5,
-        question: "What does 'advantage' mean?",
-        answers: [
-          { answer: "Dezavantaj", trueAnswer: false },
-          { answer: "Sorun", trueAnswer: false },
-          { answer: "Başarı", trueAnswer: false },
-          { answer: "Avantaj", trueAnswer: true },
-        ],
+        "id": 5,
+        "question": "Which tag is used to define an unordered list in HTML?",
+        "answers": [
+          { "answer": "<ul>", "trueAnswer": true },
+          { "answer": "<ol>", "trueAnswer": false },
+          { "answer": "<li>", "trueAnswer": false },
+          { "answer": "<div>", "trueAnswer": false }
+        ]
       },
       {
-        id: 6,
-        question: "What does 'apologize' mean?",
-        answers: [
-          { answer: "Övmek", trueAnswer: false },
-          { answer: "Teşvik etmek", trueAnswer: false },
-          { answer: "Hediye vermek", trueAnswer: false },
-          { answer: "Özür dilemek", trueAnswer: true },
-        ],
+        "id": 6,
+        "question": "What is the correct HTML element for inserting a line break?",
+        "answers": [
+          { "answer": "<br>", "trueAnswer": true },
+          { "answer": "<hr>", "trueAnswer": false },
+          { "answer": "<p>", "trueAnswer": false },
+          { "answer": "<span>", "trueAnswer": false }
+        ]
       },
       {
-        id: 7,
-        question: "What does 'attract' mean?",
-        answers: [
-          { answer: "Kurtarmak", trueAnswer: false },
-          { answer: "Yardım etmek", trueAnswer: false },
-          { answer: "Çekmek", trueAnswer: true },
-          { answer: "Sevmek", trueAnswer: false },
-        ],
+        "id": 7,
+        "question": "Which attribute is used to define inline styles in HTML?",
+        "answers": [
+          { "answer": "style", "trueAnswer": true },
+          { "answer": "class", "trueAnswer": false },
+          { "answer": "src", "trueAnswer": false },
+          { "answer": "id", "trueAnswer": false }
+        ]
       },
       {
-        id: 8,
-        question: "What does 'begin' mean?",
-        answers: [
-          { answer: "Bitirmek", trueAnswer: false },
-          { answer: "Başlamak", trueAnswer: true },
-          { answer: "Konuşmak", trueAnswer: false },
-          { answer: "Düşünmek", trueAnswer: false },
-        ],
+        "id": 8,
+        "question": "What is the correct HTML element for playing audio files?",
+        "answers": [
+          { "answer": "<audio>", "trueAnswer": true },
+          { "answer": "<video>", "trueAnswer": false },
+          { "answer": "<sound>", "trueAnswer": false },
+          { "answer": "<mp3>", "trueAnswer": false }
+        ]
       },
       {
-        id: 9,
-        question: "What does 'believe' mean?",
-        answers: [
-          { answer: "Reddetmek", trueAnswer: false },
-          { answer: "Saldırmak", trueAnswer: false },
-          { answer: "İnanmak", trueAnswer: true },
-          { answer: "Görmek", trueAnswer: false },
-        ],
+        "id": 9,
+        "question": "Which tag is used to define a table in HTML?",
+        "answers": [
+          { "answer": "<table>", "trueAnswer": true },
+          { "answer": "<div>", "trueAnswer": false },
+          { "answer": "<ul>", "trueAnswer": false },
+          { "answer": "<form>", "trueAnswer": false }
+        ]
       },
       {
-        id: 10,
-        question: "What does 'build' mean?",
-        answers: [
-          { answer: "İnşa etmek", trueAnswer: true },
-          { answer: "Yıkıp yok etmek", trueAnswer: false },
-          { answer: "Savaşmak", trueAnswer: false },
-          { answer: "Yükseltmek", trueAnswer: false },
-        ],
-      },
-      {
-        id: 11,
-        question: "What does 'call' mean?",
-        answers: [
-          { answer: "Görmek", trueAnswer: false },
-          { answer: "Uygun", trueAnswer: false },
-          { answer: "Tutuklamak", trueAnswer: false },
-          { answer: "Aramak", trueAnswer: true },
-        ],
-      },
-      {
-        id: 12,
-        question: "What does 'care' mean?",
-        answers: [
-          { answer: "Vermek", trueAnswer: false },
-          { answer: "Beklemek", trueAnswer: false },
-          { answer: "İlgilenmek", trueAnswer: true },
-          { answer: "Görmek", trueAnswer: false },
-        ],
-      },
-      {
-        id: 13,
-        question: "What does 'catch' mean?",
-        answers: [
-          { answer: "Ayrılmak", trueAnswer: false },
-          { answer: "Anlamak", trueAnswer: false },
-          { answer: "Yakalamak", trueAnswer: true },
-          { answer: "Yapmak", trueAnswer: false },
-        ],
-      },
-      {
-        id: 14,
-        question: "What does 'choose' mean?",
-        answers: [
-          { answer: "Kabul etmek", trueAnswer: false },
-          { answer: "Seçmek", trueAnswer: true },
-          { answer: "Yanıt vermek", trueAnswer: false },
-          { answer: "Reddetmek", trueAnswer: false },
-        ],
-      },
-      {
-        id: 15,
-        question: "What does 'clean' mean?",
-        answers: [
-          { answer: "Kirletmek", trueAnswer: false },
-          { answer: "Bakmak", trueAnswer: false },
-          { answer: "Kırmak", trueAnswer: false },
-          { answer: "Temizlemek", trueAnswer: true },
-        ],
-      },
-      {
-        id: 16,
-        question: "What does 'close' mean?",
-        answers: [
-          { answer: "Kapatmak", trueAnswer: true },
-          { answer: "Açmak", trueAnswer: false },
-          { answer: "İzlemek", trueAnswer: false },
-          { answer: "Birleştirmek", trueAnswer: false },
-        ],
-      },
-      {
-        id: 17,
-        question: "What does 'cook' mean?",
-        answers: [
-          { answer: "Boşaltmak", trueAnswer: false },
-          { answer: "Pişirmek", trueAnswer: true },
-          { answer: "Sıkışmak", trueAnswer: false },
-          { answer: "Görmek", trueAnswer: false },
-        ],
-      },
-      {
-        id: 18,
-        question: "What does 'count' mean?",
-        answers: [
-          { answer: "Bulmak", trueAnswer: false },
-          { answer: "Vurmak", trueAnswer: false },
-          { answer: "Yenmek", trueAnswer: false },
-          { answer: "Saymak", trueAnswer: true },
-        ],
-      },
-      {
-        id: 19,
-        question: "What does 'cry' mean?",
-        answers: [
-          { answer: "Gülümsemek", trueAnswer: false },
-          { answer: "Kızgın olmak", trueAnswer: false },
-          { answer: "Ağlamak", trueAnswer: true },
-          { answer: "Korkmak", trueAnswer: false },
-        ],
-      },
-      {
-        id: 20,
-        question: "What does 'cut' mean?",
-        answers: [
-          { answer: "Kesmek", trueAnswer: true },
-          { answer: "Yapıştırmak", trueAnswer: false },
-          { answer: "Bozmak", trueAnswer: false },
-          { answer: "Satmak", trueAnswer: false },
-        ],
-      },
+        "id": 10,
+        "question": "What is the correct HTML element for creating a checkbox?",
+        "answers": [
+          { "answer": "<input type='checkbox'>", "trueAnswer": true },
+          { "answer": "<select>", "trueAnswer": false },
+          { "answer": "<radio>", "trueAnswer": false },
+          { "answer": "<label>", "trueAnswer": false }
+        ]
+      }
     ],
-    B1: [
+    CSS: [
       {
-        id: 1,
-        question: "What does 'accommodation' mean?",
-        answers: [
-          { answer: "Yemek", trueAnswer: false },
-          { answer: "Giyim", trueAnswer: false },
-          { answer: "Konaklama", trueAnswer: true },
-          { answer: "İş", trueAnswer: false },
-        ],
+        "id": 1,
+        "question": "Which CSS property is used to change the text color of an element?",
+        "answers": [
+          { "answer": "color", "trueAnswer": true },
+          { "answer": "font-size", "trueAnswer": false },
+          { "answer": "background-color", "trueAnswer": false },
+          { "answer": "text-align", "trueAnswer": false }
+        ]
       },
       {
-        id: 2,
-        question: "What does 'adventure' mean?",
-        answers: [
-          { answer: "Dostluk", trueAnswer: false },
-          { answer: "Macera", trueAnswer: true },
-          { answer: "Aşk", trueAnswer: false },
-          { answer: "Başarı", trueAnswer: false },
-        ],
+        "id": 2,
+        "question": "Which CSS property is used to add spacing between letters in a text?",
+        "answers": [
+          { "answer": "letter-spacing", "trueAnswer": true },
+          { "answer": "line-height", "trueAnswer": false },
+          { "answer": "text-indent", "trueAnswer": false },
+          { "answer": "text-transform", "trueAnswer": false }
+        ]
       },
       {
-        id: 3,
-        question: "What does 'anxious' mean?",
-        answers: [
-          { answer: "Endişeli", trueAnswer: true },
-          { answer: "Mutlu", trueAnswer: false },
-          { answer: "Sakin", trueAnswer: false },
-          { answer: "Korkmuş", trueAnswer: false },
-        ],
+        "id": 3,
+        "question": "Which CSS property is used to set the height of an element?",
+        "answers": [
+          { "answer": "height", "trueAnswer": true },
+          { "answer": "width", "trueAnswer": false },
+          { "answer": "padding", "trueAnswer": false },
+          { "answer": "margin", "trueAnswer": false }
+        ]
       },
       {
-        id: 4,
-        question: "What does 'career' mean?",
-        answers: [
-          { answer: "Okul", trueAnswer: false },
-          { answer: "Aile", trueAnswer: false },
-          { answer: "Sağlık", trueAnswer: false },
-          { answer: "Kariyer", trueAnswer: true },
-        ],
+        "id": 4,
+        "question": "Which CSS property is used to control the order of the elements in a flex container?",
+        "answers": [
+          { "answer": "order", "trueAnswer": true },
+          { "answer": "flex-direction", "trueAnswer": false },
+          { "answer": "align-items", "trueAnswer": false },
+          { "answer": "justify-content", "trueAnswer": false }
+        ]
       },
       {
-        id: 5,
-        question: "What does 'comfortable' mean?",
-        answers: [
-          { answer: "Zor", trueAnswer: false },
-          { answer: "Rahat", trueAnswer: true },
-          { answer: "Sıcak", trueAnswer: false },
-          { answer: "Ağrılı", trueAnswer: false },
-        ],
+        "id": 5,
+        "question": "Which CSS property is used to add a shadow effect to an element?",
+        "answers": [
+          { "answer": "box-shadow", "trueAnswer": true },
+          { "answer": "text-shadow", "trueAnswer": false },
+          { "answer": "background-color", "trueAnswer": false },
+          { "answer": "border-radius", "trueAnswer": false }
+        ]
       },
       {
-        id: 6,
-        question: "What does 'culture' mean?",
-        answers: [
-          { answer: "Spor", trueAnswer: false },
-          { answer: "Kültür", trueAnswer: true },
-          { answer: "Yiyecek", trueAnswer: false },
-          { answer: "Doğa", trueAnswer: false },
-        ],
+        "id": 6,
+        "question": "Which CSS property is used to create rounded corners on an element?",
+        "answers": [
+          { "answer": "border-radius", "trueAnswer": true },
+          { "answer": "border-width", "trueAnswer": false },
+          { "answer": "margin", "trueAnswer": false },
+          { "answer": "padding", "trueAnswer": false }
+        ]
       },
       {
-        id: 7,
-        question: "What does 'deduction' mean?",
-        answers: [
-          { answer: "Tahmin", trueAnswer: false },
-          { answer: "Gözlem", trueAnswer: false },
-          { answer: "Çıkarım", trueAnswer: true },
-          { answer: "Bağış", trueAnswer: false },
-        ],
+        "id": 7,
+        "question": "Which CSS property is used to set the background image of an element?",
+        "answers": [
+          { "answer": "background-image", "trueAnswer": true },
+          { "answer": "background-color", "trueAnswer": false },
+          { "answer": "border-image", "trueAnswer": false },
+          { "answer": "background-position", "trueAnswer": false }
+        ]
       },
       {
-        id: 8,
-        question: "What does 'empathy' mean?",
-        answers: [
-          { answer: "Empati", trueAnswer: true },
-          { answer: "Hoşgörü", trueAnswer: false },
-          { answer: "Takdir", trueAnswer: false },
-          { answer: "Sorgulama", trueAnswer: false },
-        ],
+        "id": 8,
+        "question": "Which CSS property is used to control the spacing between lines of text?",
+        "answers": [
+          { "answer": "line-height", "trueAnswer": true },
+          { "answer": "letter-spacing", "trueAnswer": false },
+          { "answer": "text-indent", "trueAnswer": false },
+          { "answer": "text-transform", "trueAnswer": false }
+        ]
       },
       {
-        id: 9,
-        question: "What does 'frustration' mean?",
-        answers: [
-          { answer: "Başarı", trueAnswer: false },
-          { answer: "Heyecan", trueAnswer: false },
-          { answer: "Hayal kırıklığı", trueAnswer: true },
-          { answer: "Enerji", trueAnswer: false },
-        ],
+        "id": 9,
+        "question": "Which CSS property is used to specify the font family of an element?",
+        "answers": [
+          { "answer": "font-family", "trueAnswer": true },
+          { "answer": "font-size", "trueAnswer": false },
+          { "answer": "text-decoration", "trueAnswer": false },
+          { "answer": "font-weight", "trueAnswer": false }
+        ]
       },
       {
-        id: 10,
-        question: "What does 'globalization' mean?",
-        answers: [
-          { answer: "Bölgeselleşme", trueAnswer: false },
-          { answer: "Millileşme", trueAnswer: false },
-          { answer: "Uzaklaşma", trueAnswer: false },
-          { answer: "Küreselleşme", trueAnswer: true },
-        ],
-      },
-      {
-        id: 11,
-        question: "What does 'hypothesis' mean?",
-        answers: [
-          { answer: "Kanıt", trueAnswer: false },
-          { answer: "Sonuç", trueAnswer: false },
-          { answer: "Hipotez", trueAnswer: true },
-          { answer: "Öneri", trueAnswer: false },
-        ],
-      },
-      {
-        id: 12,
-        question: "What does 'inevitable' mean?",
-        answers: [
-          { answer: "Kaçınılmaz", trueAnswer: true },
-          { answer: "Gerekli", trueAnswer: false },
-          { answer: "Olağan", trueAnswer: false },
-          { answer: "Yanıltıcı", trueAnswer: false },
-        ],
-      },
-      {
-        id: 13,
-        question: "What does 'justify' mean?",
-        answers: [
-          { answer: "Reddetmek", trueAnswer: false },
-          { answer: "Düşünmek", trueAnswer: false },
-          { answer: "Değiştirmek", trueAnswer: false },
-          { answer: "Doğrulamak", trueAnswer: true },
-        ],
-      },
-      {
-        id: 14,
-        question: "What does 'knowledge' mean?",
-        answers: [
-          { answer: "Bilgi", trueAnswer: true },
-          { answer: "İnanç", trueAnswer: false },
-          { answer: "Düşünce", trueAnswer: false },
-          { answer: "Deneyim", trueAnswer: false },
-        ],
-      },
-      {
-        id: 15,
-        question: "What does 'independent' mean?",
-        answers: [
-          { answer: "Mutlu", trueAnswer: false },
-          { answer: "Bağımsız", trueAnswer: true },
-          { answer: "Zayıf", trueAnswer: false },
-          { answer: "Dinç", trueAnswer: false },
-        ],
-      },
-      {
-        id: 16,
-        question: "What does 'opportunity' mean?",
-        answers: [
-          { answer: "Zorluk", trueAnswer: false },
-          { answer: "Fırsat", trueAnswer: true },
-          { answer: "Hedef", trueAnswer: false },
-          { answer: "Güzel", trueAnswer: false },
-        ],
-      },
-      {
-        id: 17,
-        question: "What does 'responsible' mean?",
-        answers: [
-          { answer: "Kıskanç", trueAnswer: false },
-          { answer: "Sevgi dolu", trueAnswer: false },
-          { answer: "Sorumlu", trueAnswer: true },
-          { answer: "Cesur", trueAnswer: false },
-        ],
-      },
-      {
-        id: 18,
-        question: "What does 'sufficient' mean?",
-        answers: [
-          { answer: "Zor", trueAnswer: false },
-          { answer: "Kötü", trueAnswer: false },
-          { answer: "Zengin", trueAnswer: false },
-          { answer: "Yeterli", trueAnswer: true },
-        ],
-      },
-      {
-        id: 19,
-        question: "What does 'tradition' mean?",
-        answers: [
-          { answer: "Dans", trueAnswer: false },
-          { answer: "Gelenek", trueAnswer: true },
-          { answer: "Güzel", trueAnswer: false },
-          { answer: "Müzik", trueAnswer: false },
-        ],
-      },
-      {
-        id: 20,
-        question: "What does 'vocabulary' mean?",
-        answers: [
-          { answer: "Resim", trueAnswer: false },
-          { answer: "Kelime hazinesi", trueAnswer: true },
-          { answer: "Kitap", trueAnswer: false },
-          { answer: "Yemek tarifi", trueAnswer: false },
-        ],
-      },
+        "id": 10,
+        "question": "Which CSS property is used to make an element take up the full height and width of its parent?",
+        "answers": [
+          { "answer": "width: 100%; height: 100%;", "trueAnswer": true },
+          { "answer": "display: block;", "trueAnswer": false },
+          { "answer": "position: absolute;", "trueAnswer": false },
+          { "answer": "float: none;", "trueAnswer": false }
+        ]
+      }
     ],
-    B2: [
+    JavaScript: [
       {
-        id: 1,
-        question: "What does 'acquaintance' mean?",
-        answers: [
-          { answer: "Tanışıklık", trueAnswer: true },
-          { answer: "Eşlik", trueAnswer: false },
-          { answer: "Özgünlük", trueAnswer: false },
-          { answer: "Çıkarım", trueAnswer: false },
-        ],
+        "id": 1,
+        "question": "What is the correct way to declare a variable in JavaScript?",
+        "answers": [
+          { "answer": "var myVar;", "trueAnswer": true },
+          { "answer": "variable myVar;", "trueAnswer": false },
+          { "answer": "myVar = 10;", "trueAnswer": false },
+          { "answer": "let myVar;", "trueAnswer": false }
+        ]
       },
       {
-        id: 2,
-        question: "Which one is the meaning of 'consequence'?",
-        answers: [
-          { answer: "Mantık", trueAnswer: false },
-          { answer: "Sonuç", trueAnswer: true },
-          { answer: "Soruşturma", trueAnswer: false },
-          { answer: "Tedavi", trueAnswer: false },
-        ],
+        "id": 2,
+        "question": "What is the result of the following expression: 5 + '2'?",
+        "answers": [
+          { "answer": "'52'", "trueAnswer": true },
+          { "answer": "7", "trueAnswer": false },
+          { "answer": "NaN", "trueAnswer": false },
+          { "answer": "52", "trueAnswer": false }
+        ]
       },
       {
-        id: 3,
-        question: "What is the meaning of 'nervous'?",
-        answers: [
-          { answer: "Tembel", trueAnswer: false },
-          { answer: "Hırslı", trueAnswer: false },
-          { answer: "Sinirli", trueAnswer: true },
-          { answer: "Çalışkan", trueAnswer: false },
-        ],
+        "id": 3,
+        "question": "Which keyword is used to define a function in JavaScript?",
+        "answers": [
+          { "answer": "function", "trueAnswer": true },
+          { "answer": "def", "trueAnswer": false },
+          { "answer": "fun", "trueAnswer": false },
+          { "answer": "void", "trueAnswer": false }
+        ]
       },
       {
-        id: 4,
-        question: "Which one is the meaning of 'Complicated'?",
-        answers: [
-          { answer: "Karmaşık", trueAnswer: true },
-          { answer: "Basit", trueAnswer: false },
-          { answer: "Ayrıntılı", trueAnswer: false },
-          { answer: "Hızlı", trueAnswer: false },
-        ],
+        "id": 4,
+        "question": "What is the correct way to write a comment in JavaScript?",
+        "answers": [
+          { "answer": "// This is a comment", "trueAnswer": true },
+          { "answer": "<!-- This is a comment -->", "trueAnswer": false },
+          { "answer": "/* This is a comment */", "trueAnswer": false },
+          { "answer": "# This is a comment", "trueAnswer": false }
+        ]
       },
       {
-        id: 5,
-        question: "What does 'fluctuate' mean?",
-        answers: [
-          { answer: "Değişkenlik göstermek", trueAnswer: true },
-          { answer: "İzlemek", trueAnswer: false },
-          { answer: "İddia etmek", trueAnswer: false },
-          { answer: "Harcamak", trueAnswer: false },
-        ],
+        "id": 5,
+        "question": "Which operator is used for strict equality comparison in JavaScript?",
+        "answers": [
+          { "answer": "===", "trueAnswer": true },
+          { "answer": "==", "trueAnswer": false },
+          { "answer": "=", "trueAnswer": false },
+          { "answer": "!==", "trueAnswer": false }
+        ]
       },
       {
-        id: 6,
-        question: "Which one is the meaning of 'humble'?",
-        answers: [
-          { answer: "Alçakgönüllü", trueAnswer: true },
-          { answer: "Dürüst", trueAnswer: false },
-          { answer: "Kibirli", trueAnswer: false },
-          { answer: "Akıllı", trueAnswer: false },
-        ],
+        "id": 6,
+        "question": "What is the output of the following code?\nconsole.log(2 + '2' - 1);",
+        "answers": [
+          { "answer": "21", "trueAnswer": true },
+          { "answer": "3", "trueAnswer": false },
+          { "answer": "22", "trueAnswer": false },
+          { "answer": "NaN", "trueAnswer": false }
+        ]
       },
       {
-        id: 7,
-        question: "What is the meaning of 'incorporate'?",
-        answers: [
-          { answer: "Ayırmak", trueAnswer: false },
-          { answer: "Küçülmek", trueAnswer: false },
-          { answer: "İçermek", trueAnswer: true },
-          { answer: "Anlaşmak", trueAnswer: false },
-        ],
+        "id": 7,
+        "question": "Which method is used to add an element to the end of an array in JavaScript?",
+        "answers": [
+          { "answer": "push()", "trueAnswer": true },
+          { "answer": "add()", "trueAnswer": false },
+          { "answer": "append()", "trueAnswer": false },
+          { "answer": "concat()", "trueAnswer": false }
+        ]
       },
       {
-        id: 8,
-        question: "Which one is the meaning of 'justifiable'?",
-        answers: [
-          { answer: "Sorgulanabilir", trueAnswer: false },
-          { answer: "Kabul edilebilir", trueAnswer: true },
-          { answer: "Yenilmez", trueAnswer: false },
-          { answer: "Makul", trueAnswer: false },
-        ],
+        "id": 8,
+        "question": "What is the result of the following expression: '5' == 5?",
+        "answers": [
+          { "answer": "true", "trueAnswer": true },
+          { "answer": "false", "trueAnswer": false },
+          { "answer": "NaN", "trueAnswer": false },
+          { "answer": "undefined", "trueAnswer": false }
+        ]
       },
       {
-        id: 9,
-        question: "What does 'legacy' mean?",
-        answers: [
-          { answer: "Mirasa konmak", trueAnswer: false },
-          { answer: "Tarih", trueAnswer: false },
-          { answer: "Miras bırakmak", trueAnswer: false },
-          { answer: "Kalıt", trueAnswer: true },
-        ],
+        "id": 9,
+        "question": "Which method is used to remove the last element from an array in JavaScript?",
+        "answers": [
+          { "answer": "pop()", "trueAnswer": true },
+          { "answer": "remove()", "trueAnswer": false },
+          { "answer": "delete()", "trueAnswer": false },
+          { "answer": "shift()", "trueAnswer": false }
+        ]
       },
       {
-        id: 10,
-        question: "Which one is the meaning of 'manifest'?",
-        answers: [
-          { answer: "Gizli", trueAnswer: false },
-          { answer: "Açık", trueAnswer: true },
-          { answer: "İstenmeyen", trueAnswer: false },
-          { answer: "Özür dilemek", trueAnswer: false },
-        ],
-      },
-      {
-        id: 11,
-        question: "What is the meaning of 'notorious'?",
-        answers: [
-          { answer: "Ünlü", trueAnswer: false },
-          { answer: "Gizemli", trueAnswer: false },
-          { answer: "Kötü ün salmış", trueAnswer: true },
-          { answer: "Sevgi dolu", trueAnswer: false },
-        ],
-      },
-      {
-        id: 12,
-        question: "Which one is the meaning of 'obstruct'?",
-        answers: [
-          { answer: "Engellemek", trueAnswer: true },
-          { answer: "Onaylamak", trueAnswer: false },
-          { answer: "Arttırmak", trueAnswer: false },
-          { answer: "Saldırmak", trueAnswer: false },
-        ],
-      },
-      {
-        id: 13,
-        question: "What does 'profound' mean?",
-        answers: [
-          { answer: "Anlamsız", trueAnswer: false },
-          { answer: "Derin", trueAnswer: true },
-          { answer: "Galiz", trueAnswer: false },
-          { answer: "Kaba", trueAnswer: false },
-        ],
-      },
-      {
-        id: 14,
-        question: "Which one is the meaning of 'rational'?",
-        answers: [
-          { answer: "Mantıklı", trueAnswer: true },
-          { answer: "İkna edici", trueAnswer: false },
-          { answer: "Karanlık", trueAnswer: false },
-          { answer: "Küçültülmüş", trueAnswer: false },
-        ],
-      },
-      {
-        id: 15,
-        question: "What is the meaning of 'speculate'?",
-        answers: [
-          { answer: "Kurban etmek", trueAnswer: false },
-          { answer: "Aksettirmek", trueAnswer: false },
-          { answer: "Tahmin etmek", trueAnswer: true },
-          { answer: "Söz vermek", trueAnswer: false },
-        ],
-      },
-      {
-        id: 16,
-        question: "Which one is the meaning of 'trivial'?",
-        answers: [
-          { answer: "Zorla yapılan", trueAnswer: false },
-          { answer: "Değerli", trueAnswer: false },
-          { answer: "Utangaç", trueAnswer: false },
-          { answer: "Önemsiz", trueAnswer: true },
-        ],
-      },
-      {
-        id: 17,
-        question: "What does 'ultimate' mean?",
-        answers: [
-          { answer: "Nihai", trueAnswer: true },
-          { answer: "Gecikmiş", trueAnswer: false },
-          { answer: "Çarpıcı", trueAnswer: false },
-          { answer: "Dikkate değmez", trueAnswer: false },
-        ],
-      },
-      {
-        id: 18,
-        question: "Which one is the meaning of 'vague'?",
-        answers: [
-          { answer: "Kaba", trueAnswer: false },
-          { answer: "Net olmayan", trueAnswer: true },
-          { answer: "Yaşlı", trueAnswer: false },
-          { answer: "Adil", trueAnswer: false },
-        ],
-      },
-      {
-        id: 19,
-        question: "What is the meaning of 'widespread'?",
-        answers: [
-          { answer: "Kısıtlı", trueAnswer: false },
-          { answer: "Yaygın", trueAnswer: true },
-          { answer: "Farklı", trueAnswer: false },
-          { answer: "Azalmış", trueAnswer: false },
-        ],
-      },
-      {
-        id: 20,
-        question: "Which one is the meaning of 'vivid'?",
-        answers: [
-          { answer: "Canlı", trueAnswer: true },
-          { answer: "Büyüleyici", trueAnswer: false },
-          { answer: "Karışık", trueAnswer: false },
-          { answer: "Olumsuz", trueAnswer: false },
-        ],
-      },
+        "id": 10,
+        "question": "What is the output of the following code?\nconsole.log(typeof null);",
+        "answers": [
+          { "answer": "'object'", "trueAnswer": true },
+          { "answer": "'null'", "trueAnswer": false },
+          { "answer": "'undefined'", "trueAnswer": false },
+          { "answer": "'string'", "trueAnswer": false }
+        ]
+      }, 
     ],
-    C1: [
+    NodeJs: [
       {
-        id: 1,
-        question: "What is the meaning of the word 'conjecture'?",
-        answers: [
-          { answer: "gerçek", trueAnswer: false },
-          { answer: "tahmin", trueAnswer: true },
-          { answer: "yalan", trueAnswer: false },
-          { answer: "karar", trueAnswer: false },
-        ],
+        "id": 1,
+        "question": "What is Node.js?",
+        "answers": [
+          { "answer": "A server-side JavaScript runtime", "trueAnswer": true },
+          { "answer": "A front-end development framework", "trueAnswer": false },
+          { "answer": "A database management system", "trueAnswer": false },
+          { "answer": "A programming language", "trueAnswer": false }
+        ]
       },
       {
-        id: 2,
-        question: "What does the word 'diligent' mean?",
-        answers: [
-          { answer: "tembel", trueAnswer: false },
-          { answer: "çalışkan", trueAnswer: true },
-          { answer: "yavaş", trueAnswer: false },
-          { answer: "kaygılı", trueAnswer: false },
-        ],
+        "id": 2,
+        "question": "Which package manager is commonly used in Node.js?",
+        "answers": [
+          { "answer": "npm", "trueAnswer": true },
+          { "answer": "yarn", "trueAnswer": false },
+          { "answer": "bower", "trueAnswer": false },
+          { "answer": "pip", "trueAnswer": false }
+        ]
       },
       {
-        id: 3,
-        question: "What is the meaning of the word 'elaborate'?",
-        answers: [
-          { answer: "basit", trueAnswer: false },
-          { answer: "karmaşık", trueAnswer: true },
-          { answer: "sıkıcı", trueAnswer: false },
-          { answer: "uygun", trueAnswer: false },
-        ],
+        "id": 3,
+        "question": "What is the command to install dependencies specified in a package.json file?",
+        "answers": [
+          { "answer": "npm install", "trueAnswer": true },
+          { "answer": "npm init", "trueAnswer": false },
+          { "answer": "npm run", "trueAnswer": false },
+          { "answer": "npm start", "trueAnswer": false }
+        ]
       },
       {
-        id: 4,
-        question: "What does the word 'feasible' mean?",
-        answers: [
-          { answer: "mantıklı", trueAnswer: true },
-          { answer: "anlamsız", trueAnswer: false },
-          { answer: "tehlikeli", trueAnswer: false },
-          { answer: "garip", trueAnswer: false },
-        ],
+        "id": 4,
+        "question": "Which module is commonly used for handling file operations in Node.js?",
+        "answers": [
+          { "answer": "fs", "trueAnswer": true },
+          { "answer": "http", "trueAnswer": false },
+          { "answer": "path", "trueAnswer": false },
+          { "answer": "net", "trueAnswer": false }
+        ]
       },
       {
-        id: 5,
-        question: "What is the meaning of the word 'gregarious'?",
-        answers: [
-          { answer: "kendine dönük", trueAnswer: false },
-          { answer: "samimi", trueAnswer: false },
-          { answer: "güvenilir", trueAnswer: false },
-          { answer: "sosyal", trueAnswer: true },
-        ],
+        "id": 5,
+        "question": "What is the purpose of the 'require' function in Node.js?",
+        "answers": [
+          { "answer": "To include modules", "trueAnswer": true },
+          { "answer": "To define variables", "trueAnswer": false },
+          { "answer": "To create classes", "trueAnswer": false },
+          { "answer": "To handle errors", "trueAnswer": false }
+        ]
       },
       {
-        id: 6,
-        question: "What does the word 'hackneyed' mean?",
-        answers: [
-          { answer: "orijinal", trueAnswer: false },
-          { answer: "sıkıcı", trueAnswer: true },
-          { answer: "güçlü", trueAnswer: false },
-          { answer: "zararsız", trueAnswer: false },
-        ],
-        trueAnswer: "sıkıcı",
+        "id": 6,
+        "question": "What is the default package.json file name in a Node.js project?",
+        "answers": [
+          { "answer": "package.json", "trueAnswer": true },
+          { "answer": "config.json", "trueAnswer": false },
+          { "answer": "manifest.json", "trueAnswer": false },
+          { "answer": "node.json", "trueAnswer": false }
+        ]
       },
       {
-        id: 7,
-        question: "What is the meaning of the word 'imminent'?",
-        answers: [
-          { answer: "gizli", trueAnswer: false },
-          { answer: "olması yakın", trueAnswer: true },
-          { answer: "açık", trueAnswer: false },
-          { answer: "başarılı", trueAnswer: false },
-        ],
+        "id": 7,
+        "question": "Which event is emitted when an unhandled exception occurs in Node.js?",
+        "answers": [
+          { "answer": "uncaughtException", "trueAnswer": true },
+          { "answer": "error", "trueAnswer": false },
+          { "answer": "exception", "trueAnswer": false },
+          { "answer": "fatalError", "trueAnswer": false }
+        ]
       },
       {
-        id: 8,
-        question: "What does the word 'inquisitive' mean?",
-        answers: [
-          { answer: "meraklı", trueAnswer: true },
-          { answer: "korkak", trueAnswer: false },
-          { answer: "aşırı", trueAnswer: false },
-          { answer: "kendine güvenen", trueAnswer: false },
-        ],
+        "id": 8,
+        "question": "What is the purpose of the 'npm start' command in a Node.js project?",
+        "answers": [
+          { "answer": "To start the application using the 'start' script defined in the package.json file", "trueAnswer": true },
+          { "answer": "To install all the dependencies specified in the package.json file", "trueAnswer": false },
+          { "answer": "To run unit tests for the application", "trueAnswer": false },
+          { "answer": "To stop the running Node.js process", "trueAnswer": false }
+        ]
       },
       {
-        id: 9,
-        question: "What is the meaning of the word 'juxtapose'?",
-        answers: [
-          { answer: "birleştirmek", trueAnswer: false },
-          { answer: "ayrı tutmak", trueAnswer: false },
-          { answer: "yan yana koymak", trueAnswer: true },
-          { answer: "düşman yapmak", trueAnswer: false },
-        ],
+        "id": 9,
+        "question": "Which module is commonly used for working with databases in Node.js?",
+        "answers": [
+          { "answer": "mongoose", "trueAnswer": true },
+          { "answer": "express", "trueAnswer": false },
+          { "answer": "sequelize", "trueAnswer": false },
+          { "answer": "body-parser", "trueAnswer": false }
+        ]
       },
       {
-        id: 10,
-        question: "What does the word 'keen' mean?",
-        answers: [
-          { answer: "anlamsız", trueAnswer: false },
-          { answer: "kararlı", trueAnswer: false },
-          { answer: "keskin", trueAnswer: true },
-          { answer: "huzursuz", trueAnswer: false },
-        ],
+        "id": 10,
+        "question": "What is the purpose of the 'require.resolve' function in Node.js?",
+        "answers": [
+          { "answer": "To get the path of a module without actually loading it", "trueAnswer": true },
+          { "answer": "To check if a module is installed in the project", "trueAnswer": false },
+          { "answer": "To resolve dependencies in the package.json file", "trueAnswer": false },
+          { "answer": "To require a module asynchronously", "trueAnswer": false }
+        ]
+      }],
+    Frontend: [
+      {
+        "id": 1,
+        "question": "What does HTML stand for?",
+        "answers": [
+          { "answer": "Hyper Text Markup Language", "trueAnswer": true },
+          { "answer": "Hyperlinks and Text Markup Language", "trueAnswer": false },
+          { "answer": "Home Tool Markup Language", "trueAnswer": false },
+          { "answer": "Hyper Transfer Markup Language", "trueAnswer": false }
+        ]
       },
       {
-        id: 11,
-        question: "What is the meaning of the word 'lucid'?",
-        answers: [
-          { answer: "belirsiz", trueAnswer: false },
-          { answer: "karanlık", trueAnswer: false },
-          { answer: "anlaşılır", trueAnswer: true },
-          { answer: "çoklu", trueAnswer: false },
-        ],
+        "id": 2,
+        "question": "Which tag is used to define an unordered list in HTML?",
+        "answers": [
+          { "answer": "<ul>", "trueAnswer": true },
+          { "answer": "<ol>", "trueAnswer": false },
+          { "answer": "<li>", "trueAnswer": false },
+          { "answer": "<dl>", "trueAnswer": false }
+        ]
       },
       {
-        id: 12,
-        question: "What does the word 'malleable' mean?",
-        answers: [
-          { answer: "uyumsuz", trueAnswer: false },
-          { answer: "esnek", trueAnswer: true },
-          { answer: "düzensiz", trueAnswer: false },
-          { answer: "dostça", trueAnswer: false },
-        ],
+        "id": 3,
+        "question": "Which CSS property is used to change the color of text?",
+        "answers": [
+          { "answer": "color", "trueAnswer": true },
+          { "answer": "background-color", "trueAnswer": false },
+          { "answer": "font-size", "trueAnswer": false },
+          { "answer": "text-decoration", "trueAnswer": false }
+        ]
       },
       {
-        id: 13,
-        question: "What is the meaning of the word 'nostalgia'?",
-        answers: [
-          { answer: "özlem", trueAnswer: true },
-          { answer: "kin", trueAnswer: false },
-          { answer: "heyecan", trueAnswer: false },
-          { answer: "küçümseme", trueAnswer: false },
-        ],
+        "id": 4,
+        "question": "Which method is used to add an element at the end of an array in JavaScript?",
+        "answers": [
+          { "answer": "push()", "trueAnswer": true },
+          { "answer": "pop()", "trueAnswer": false },
+          { "answer": "shift()", "trueAnswer": false },
+          { "answer": "unshift()", "trueAnswer": false }
+        ]
       },
       {
-        id: 14,
-        question: "What does the word 'obscure' mean?",
-        answers: [
-          { answer: "açık", trueAnswer: false },
-          { answer: "belirsiz", trueAnswer: true },
-          { answer: "anlaşılır", trueAnswer: false },
-          { answer: "övülmüş", trueAnswer: false },
-        ],
+        "id": 5,
+        "question": "Which event is triggered when a user clicks on an HTML element?",
+        "answers": [
+          { "answer": "click", "trueAnswer": true },
+          { "answer": "mouseover", "trueAnswer": false },
+          { "answer": "keydown", "trueAnswer": false },
+          { "answer": "submit", "trueAnswer": false }
+        ]
       },
       {
-        id: 15,
-        question: "What is the meaning of the word 'pensive'?",
-        answers: [
-          { answer: "düşünceli", trueAnswer: true },
-          { answer: "korkak", trueAnswer: false },
-          { answer: "neşeli", trueAnswer: false },
-          { answer: "şüpheli", trueAnswer: false },
-        ],
+        "id": 6,
+        "question": "What is the default position value in CSS?",
+        "answers": [
+          { "answer": "static", "trueAnswer": true },
+          { "answer": "relative", "trueAnswer": false },
+          { "answer": "absolute", "trueAnswer": false },
+          { "answer": "fixed", "trueAnswer": false }
+        ]
       },
       {
-        id: 16,
-        question: "What does the word 'quaint' mean?",
-        answers: [
-          { answer: "gösterişli", trueAnswer: false },
-          { answer: "yabancı", trueAnswer: false },
-          { answer: "tuhaftır", trueAnswer: true },
-          { answer: "yüksek", trueAnswer: false },
-        ],
+        "id": 7,
+        "question": "What is the correct way to declare a variable in JavaScript?",
+        "answers": [
+          { "answer": "var myVariable;", "trueAnswer": true },
+          { "answer": "variable myVariable;", "trueAnswer": false },
+          { "answer": "let myVariable;", "trueAnswer": false },
+          { "answer": "const myVariable;", "trueAnswer": false }
+        ]
       },
       {
-        id: 17,
-        question: "What is the meaning of the word 'applaud'?",
-        answers: [
-          { answer: "iyimser", trueAnswer: false },
-          { answer: "dayanıklı", trueAnswer: false },
-          { answer: "Alkışlamak", trueAnswer: true },
-          { answer: "aptal", trueAnswer: false },
-        ],
+        "id": 8,
+        "question": "What is the purpose of the 'DOMContentLoaded' event in JavaScript?",
+        "answers": [
+          { "answer": "It is triggered when the HTML document has been completely loaded and parsed.", "trueAnswer": true },
+          { "answer": "It is triggered when the user clicks on an element.", "trueAnswer": false },
+          { "answer": "It is triggered when an AJAX request is completed.", "trueAnswer": false },
+          { "answer": "It is triggered when an error occurs during script execution.", "trueAnswer": false }
+        ]
       },
       {
-        id: 18,
-        question: "What does the word 'superfluous' mean?",
-        answers: [
-          { answer: "gerekli", trueAnswer: false },
-          { answer: "gereksiz", trueAnswer: true },
-          { answer: "başarılı", trueAnswer: false },
-          { answer: "talihsiz", trueAnswer: false },
-        ],
+        "id": 9,
+        "question": "Which HTML tag is used to link an external CSS file?",
+        "answers": [
+          { "answer": "<link>", "trueAnswer": true },
+          { "answer": "<style>", "trueAnswer": false },
+          { "answer": "<script>", "trueAnswer": false },
+          { "answer": "<head>", "trueAnswer": false }
+        ]
       },
       {
-        id: 19,
-        question: "What is the meaning of the word 'tedious'?",
-        answers: [
-          { answer: "heyecanlı", trueAnswer: false },
-          { answer: "sıkıcı", trueAnswer: true },
-          { answer: "anlamsız", trueAnswer: false },
-          { answer: "sorunlu", trueAnswer: false },
-        ],
-      },
-      {
-        id: 20,
-        question: "What does the word 'diminish' mean?",
-        answers: [
-          { answer: "nadir", trueAnswer: false },
-          { answer: "Azaltmak", trueAnswer: true },
-          { answer: "kötü niyetli", trueAnswer: false },
-          { answer: "ünlü", trueAnswer: false },
-        ],
-      },
-    ],
-    C2: [
-      {
-        id: 1,
-        question: "What is the meaning of the word 'abundant'?",
-        answers: [
-          { answer: "yetersiz", trueAnswerr: false },
-          { answer: "kısıtlı", trueAnswerr: false },
-          { answer: "dar", trueAnswerr: false },
-          { answer: "bol", trueAnswerr: true },
-        ],
-      },
-      {
-        id: 2,
-        question: "What does the word 'exquisite' mean?",
-        answers: [
-          { answer: "iğrenç", trueAnswerr: false },
-          { answer: "yumuşak", trueAnswerr: false },
-          { answer: "zarif", trueAnswerr: true },
-          { answer: "keskin", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 3,
-        question: "What is the definition of 'conundrum'?",
-        answers: [
-          { answer: "bulmaca", trueAnswerr: true },
-          { answer: "basit problem", trueAnswerr: false },
-          { answer: "çoklu seçenek", trueAnswerr: false },
-          { answer: "doğru cevap", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 4,
-        question: "What is the meaning of the word 'elated'?",
-        answers: [
-          { answer: "ümitli", trueAnswerr: false },
-          { answer: "üzgün", trueAnswerr: false },
-          { answer: "coşkulu", trueAnswerr: true },
-          { answer: "sinirli", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 5,
-        question: "What does the word 'affluent' mean?",
-        answers: [
-          { answer: "fakir", trueAnswerr: false },
-          { answer: "zengin", trueAnswerr: true },
-          { answer: "yorgun", trueAnswerr: false },
-          { answer: "sağlıklı", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 6,
-        question: "What is the definition of 'exasperate'?",
-        answers: [
-          { answer: "şaşırmak", trueAnswerr: false },
-          { answer: "korkutmak", trueAnswerr: false },
-          { answer: "öfkelendirmek", trueAnswerr: true },
-          { answer: "rahatlatmak", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 7,
-        question: "What is the meaning of the word 'resilient'?",
-        answers: [
-          { answer: "kırılgan", trueAnswerr: false },
-          { answer: "uyumlu", trueAnswerr: false },
-          { answer: "zayıf", trueAnswerr: false },
-          { answer: "dayanıklı", trueAnswerr: true },
-        ],
-      },
-      {
-        id: 8,
-        question: "What does the word 'ominous' mean?",
-        answers: [
-          { answer: "tuhaf", trueAnswerr: false },
-          { answer: "iyimser", trueAnswerr: false },
-          { answer: "tehlikeli", trueAnswerr: true },
-          { answer: "yıkıcı", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 9,
-        question: "What is the definition of 'scrutinize'?",
-        answers: [
-          { answer: "gözlemlemek", trueAnswerr: false },
-          { answer: "dışlamak", trueAnswerr: false },
-          { answer: "incelemek", trueAnswerr: true },
-          { answer: "hızlandırmak", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 10,
-        question: "What is the meaning of the word 'prolific'?",
-        answers: [
-          { answer: "verimli", trueAnswerr: true },
-          { answer: "dikkatsiz", trueAnswerr: false },
-          { answer: "zayıf", trueAnswerr: false },
-          { answer: "önemsiz", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 11,
-        question: "What does the word 'impeccable' mean?",
-        answers: [
-          { answer: "kötü", trueAnswerr: false },
-          { answer: "hatasız", trueAnswerr: true },
-          { answer: "endişeli", trueAnswerr: false },
-          { answer: "sevgi dolu", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 12,
-        question: "What is the definition of 'perplexed'?",
-        answers: [
-          { answer: "şaşkın", trueAnswerr: true },
-          { answer: "sıkılmış", trueAnswerr: false },
-          { answer: "korkmuş", trueAnswerr: false },
-          { answer: "özgüvenli", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 13,
-        question: "What is the meaning of the word 'mundane'?",
-        answers: [
-          { answer: "anlamsız", trueAnswerr: false },
-          { answer: "eğlenceli", trueAnswerr: false },
-          { answer: "özgün", trueAnswerr: false },
-          { answer: "sıradan", trueAnswerr: true },
-        ],
-      },
-      {
-        id: 14,
-        question: "What does the word 'quintessential' mean?",
-        answers: [
-          { answer: "temel", trueAnswerr: true },
-          { answer: "karmaşık", trueAnswerr: false },
-          { answer: "kaba", trueAnswerr: false },
-          { answer: "havalı", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 15,
-        question: "What is the definition of the word 'ephemeral'?",
-        answers: [
-          { answer: "geçici", trueAnswerr: true },
-          { answer: "kalıcı", trueAnswerr: false },
-          { answer: "kötü", trueAnswerr: false },
-          { answer: "yararlı", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 16,
-        question: "What is the meaning of the word 'verbose'?",
-        answers: [
-          { answer: "anlaşılır", trueAnswerr: false },
-          { answer: "kesin", trueAnswerr: false },
-          { answer: "açık", trueAnswerr: false },
-          { answer: "aşırı sözlü", trueAnswerr: true },
-        ],
-      },
-      {
-        id: 17,
-        question: "What does the word 'quell' mean?",
-        answers: [
-          { answer: "yaralamak", trueAnswerr: false },
-          { answer: "yapıştırmak", trueAnswerr: false },
-          { answer: "yatıştırmak", trueAnswerr: true },
-          { answer: "yükseltmek", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 18,
-        question: "What is the meaning of the word 'ennui'?",
-        answers: [
-          { answer: "heyecan", trueAnswerr: false },
-          { answer: "can sıkıntısı", trueAnswerr: true },
-          { answer: "mutluluk", trueAnswerr: false },
-          { answer: "merak", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 19,
-        question: "What does the word 'idiosyncrasy' mean?",
-        answers: [
-          { answer: "deneyim", trueAnswerr: false },
-          { answer: "alışkanlık", trueAnswerr: false },
-          { answer: "tuhaflık", trueAnswerr: true },
-          { answer: "zeka", trueAnswerr: false },
-        ],
-      },
-      {
-        id: 20,
-        question: "What is the meaning of the word 'ubiquitous'?",
-        answers: [
-          { answer: "anlık", trueAnswerr: false },
-          { answer: "evrensel", trueAnswerr: true },
-          { answer: "sınırlı", trueAnswerr: false },
-          { answer: "belirgin", trueAnswerr: false },
-        ],
-      },
+        "id": 10,
+        "question": "What is the purpose of the 'querySelector()' method in JavaScript?",
+        "answers": [
+          { "answer": "It is used to select the first element that matches a specified CSS selector.", "trueAnswer": true },
+          { "answer": "It is used to add a new element to the HTML document.", "trueAnswer": false },
+          { "answer": "It is used to remove an element from the HTML document.", "trueAnswer": false },
+          { "answer": "It is used to change the text content of an element.", "trueAnswer": false }
+        ]
+      }
     ],
   };
 

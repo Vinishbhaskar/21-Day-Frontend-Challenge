@@ -8,7 +8,7 @@ function ProgressBox({ level, currentQuestion, totalQuestions }) {
         <div className="progress-texts">
           <h2 className="progress-title">Quiz Progress</h2>
           <p className="progress-description">
-            You are solving {level} Level words quiz
+            You are solving {level} quiz.
           </p>
         </div>
         <div className="progress-icon">

@@ -7,7 +7,7 @@ function LevelBox({ level }) {
     <div className="level-box">
       <div className="level-text">
         <h2 className="level-name">{level}</h2>
-        <span>Level</span>
+        <span>Easy</span>
       </div>
       <Link className="level-link" to={`/quiz/${level}`}>
         <span>Start Quiz</span> <FaArrowRight />

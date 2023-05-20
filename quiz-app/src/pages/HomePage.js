@@ -7,7 +7,7 @@ function Home() {
     <div className="home">
       <div className="intro-box">
         <div className="intro-texts">
-          <h1 className="intro-title">English Vocabulary Quizzes</h1>
+          <h1 className="intro-title">FrontEnd Developement Quizzes</h1>
           <p className="intro-description">Choose the quiz you want to solve</p>
         </div>
         <div className="intro-icon">
@@ -16,12 +16,12 @@ function Home() {
       </div>
 
       <div className="level-boxes">
-        <LevelBox level="A1" />
-        <LevelBox level="A2" />
-        <LevelBox level="B1" />
-        <LevelBox level="B2" />
-        <LevelBox level="C1" />
-        <LevelBox level="C2" />
+        <LevelBox level="HTML" />
+        <LevelBox level="CSS" />
+        <LevelBox level="JavaScript" />
+        <LevelBox level="ReactJs" />
+        <LevelBox level="NodeJs" />
+        <LevelBox level="Frontend" />
       </div>
     </div>
   );

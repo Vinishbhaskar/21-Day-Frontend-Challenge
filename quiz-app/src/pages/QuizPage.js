@@ -65,7 +65,7 @@ function Quiz() {
       nextQuestion(null);
     }
     return () => clearInterval(timer);
-  }, [time]);
+  }, [time,]);
 
   const goToResultPage = () => {
     navigate("/result", {

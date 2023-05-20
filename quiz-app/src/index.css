@@ -138,8 +138,8 @@
     @apply text-[0.9rem] text-[color:var(--text-color)];
   }
   .next {
-    @apply relative w-full flex [justify-content:end] mt-6 mb-0 mx-0;
-  }
+    @apply relative w-full flex justify-end mt-6 mb-0 mx-0;
+  }  
   .next-btn {
     @apply flex justify-between gap-3 items-center text-[color:var(--text-color)] bg-[color:var(--first-color)] [outline:none] cursor-pointer transition-all duration-[0.25s] px-5 py-3 rounded-lg border-[none] active:scale-90;
   }

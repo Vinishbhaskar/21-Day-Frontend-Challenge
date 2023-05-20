@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Quiz App :question:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Quiz app built with React. It allows users to take quizzes on different topics and provides results based on their answers.
 
-## Available Scripts
+## Features :rocket:
 
-In the project directory, you can run:
+- Multiple quiz topics to choose from (HTML, CSS, JavaScript, ReactJs, NodeJs, Frontend).
+- Timed quizzes with a countdown timer ⏲️.
+- Progress tracking during the quiz 📊.
+- Immediate feedback on correct and incorrect answers ✅❌.
+- Results page displaying the number of correct answers and a list of all questions with their correct answers.
+- Error page for handling invalid routes ⚠️.
 
-### `npm start`
+## Table of Contents 📑
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation 💻
 
-### `npm test`
+To install and run the Quiz app locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone <repository_url>
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
 
-### `npm run eject`
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open the app in your browser at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage 📝
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Upon opening the app, the home page (`HomePage.js`) will be displayed, where users can choose a quiz topic.
+- After selecting a quiz topic, users will be redirected to the quiz page (`QuizPage.js`), where they can answer multiple-choice questions within a specified time limit.
+- The progress and remaining time are displayed in the progress box (`ProgressBox.js`) ⏳.
+- After completing the quiz, users will be shown their results on the result page (`ResultPage.js`), including the number of correct answers and a list of all questions with their correct answers.
+- In case of any errors or when accessing an invalid route, the error page (`ErrorPage.js`) will be displayed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## File Structure 📁
 
-## Learn More
+The file structure of the Quiz app is organized as follows:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+- src
+  - components
+    - LevelBox.js
+    - ProgressBox.js
+    - QuestionBox.js
+    - AnswerOption.js
+    - ResultBox.js
+    - CheckAnswerBox.js
+  - context
+    - QuizContext.js
+  - pages
+    - HomePage.js
+    - QuizPage.js
+    - ResultPage.js
+    - ErrorPage.js
+  - App.js
+  - index.js
+  - styles.css
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technology Used 💻
 
-### Code Splitting
+- React: A JavaScript library for building user interfaces.
+- React Router: A library for handling routing in a React application.
+- React Icons: A library providing popular icon packs as React components.
+- JavaScript: The programming language used for the application's logic.
+- HTML: The markup language for building the application's user interface.
+- TailWind CSS: The styling language for customizing the application's appearance.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing 🤝
 
-### Analyzing the Bundle Size
+Contributions to the Quiz app are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License 📄
 
-### Making a Progressive Web App
+This Quiz app is open source and available under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## 🎉 Conclusion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Completing Day 9 to Day 11 of the 21-day frontend development challenge was an exciting experience. Over the past three days, I dedicated my efforts to building a Quiz App using React, React Router, and Tailwind CSS. I'm thrilled to share my accomplishments during this period. 🎉
 
-### Deployment
+- **Day 9: Quiz App Structure and Layout**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  I focused on designing the structure and layout of my Quiz App using React components. Leveraging the power of React, I created reusable components such as the question container, answer options, and buttons. To style the app, I utilized the utility classes provided by Tailwind CSS, ensuring a visually appealing and responsive design. 💻🎨
 
-### `npm run build` fails to minify
+- **Day 10: Implementing Quiz Logic**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  Day 10 was an exciting day as I implemented the logic of my Quiz App using React and JavaScript. I utilized React state and props to dynamically load questions, display them to the user, and handle user interactions such as selecting an answer and progressing to the next question. Additionally, I incorporated React Router to navigate between different sections of the app, providing a seamless user experience. ⚙️🔢
+
+- **Day 11: Enhancements and Refinements**
+
+  On Day 11, I focused on enhancing and refining my Quiz App further. Building upon the foundation, I utilized Tailwind CSS to add custom styles and components, making the app more visually appealing and user-friendly. I also fine-tuned the quiz logic, implemented features like a timer using React hooks, and optimized the app for performance. Thorough testing and debugging were conducted to ensure a smooth and reliable user experience. ✨🔧
+
+I'm extremely proud of my achievements during these three days of work on the Quiz App. By utilizing the power of React, React Router, and Tailwind CSS, I successfully built a well-structured, interactive, and visually appealing app. I can't wait to showcase my progress, insights, and code breakdowns on LinkedIn, inspiring others in their frontend development journey. 🚀
+
+Follow my 21-day frontend development challenge on LinkedIn: [https://www.linkedin.com/in/vinishbhaskar/]
+
+Let's continue coding and learning together! 💻🌟
+
+Happy coding! 💻🚀

@@ -49,7 +49,7 @@ function Quiz() {
       index !== null
         ? questions[level][currentQuestion].answers[index]
         : {
-            answer: "Süre Bitti",
+            answer: "React Js",
             trueAnswer: false,
           };
     const newAnswers = [...selectedAnswers, selectedAnswer];
